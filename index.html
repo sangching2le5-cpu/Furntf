@@ -1,2225 +1,1178 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="light">
+<html lang="en" class="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Prepositions of Time – 100 Exercises (A1–B2)</title>
-<style>
-:root{
-  --bg:#F6F9FC;
-  --card:#FFFFFF;
-  --pastel:#DCEEFF;
-  --light:#EFF7FF;
-  --navy:#24476B;
-  --text:#1f3b57;
-  --muted:#6b8399;
-  --border:#d9e7f5;
-  --accent:#2F6FA8;
-  --green:#1f8a52;
-  --greenbg:#e8f7ee;
-  --red:#c0392b;
-  --redbg:#fdecea;
-  --shadow:0 6px 20px rgba(36,71,107,.08);
-}
-html[data-theme="dark"]{
-  --bg:#0f1a24;
-  --card:#16232f;
-  --pastel:#1e3346;
-  --light:#182b3b;
-  --navy:#cfe4f7;
-  --text:#dbeaf7;
-  --muted:#8aa4bc;
-  --border:#26394b;
-  --accent:#4f9ede;
-  --green:#6fd39c;
-  --greenbg:#16301f;
-  --red:#f08a80;
-  --redbg:#331b19;
-  --shadow:0 6px 20px rgba(0,0,0,.35);
-}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{max-width:100%;overflow-x:hidden}
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{color:var(--navy);margin:0 0 .5rem;line-height:1.25}
-p{margin:.4rem 0}
-a{color:var(--accent)}
-
-/* ---------- TOP BAR ---------- */
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:var(--card);
-  border-bottom:1px solid var(--border);
-  box-shadow:var(--shadow);
-  padding:10px 16px;
-  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
-}
-.brand{display:flex;align-items:center;gap:10px;font-size:.95rem}
-.brand .logo{
-  width:38px;height:38px;border-radius:12px;background:var(--pastel);
-  display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:0 0 auto;
-}
-.brand strong{display:block;color:var(--navy);font-size:1rem;line-height:1.1}
-.brand span{display:block;color:var(--muted);font-size:.75rem}
-.nav{display:flex;gap:6px;flex-wrap:wrap}
-.nav button{
-  font:inherit;font-size:.82rem;font-weight:600;
-  padding:8px 12px;border-radius:10px;cursor:pointer;
-  border:1px solid transparent;background:transparent;color:var(--muted);
-  transition:background .15s,color .15s;
-}
-.nav button:hover{background:var(--light);color:var(--navy)}
-.nav button.active{background:var(--pastel);color:var(--navy);border-color:var(--border)}
-#themeBtn{border:1px solid var(--border);background:var(--light);color:var(--navy);font-size:1rem;padding:6px 10px}
-
-/* ---------- LAYOUT ---------- */
-main{max-width:960px;margin:0 auto;padding:18px 14px 80px}
-.view{display:none;animation:fade .18s ease}
-.view.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:20px;
-  margin-bottom:16px;
-}
-
-/* ---------- HERO ---------- */
-.hero{text-align:center;background:linear-gradient(160deg,var(--pastel),var(--card) 70%)}
-.hero h1{font-size:1.55rem;letter-spacing:.5px;margin-bottom:.2rem}
-.hero h2{font-size:1.05rem;color:var(--accent);font-weight:700;margin-bottom:.4rem}
-.hero p{color:var(--muted);font-size:.92rem;margin:0}
-.hero .badges{margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.badge{background:var(--card);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:.78rem;color:var(--navy);font-weight:600}
-
-/* ---------- STATS ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:12px}
-.stat{
-  background:var(--light);border:1px solid var(--border);border-radius:14px;
-  padding:14px;text-align:center;
-}
-.stat .num{font-size:1.45rem;font-weight:800;color:var(--navy);line-height:1.2}
-.stat .lbl{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;font-weight:600}
-.stat.good .num{color:var(--green)}
-.stat.bad .num{color:var(--red)}
-
-/* ---------- PROGRESS BAR ---------- */
-.bar{height:12px;background:var(--pastel);border-radius:99px;overflow:hidden;margin:10px 0 6px}
-.bar > div{height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .35s ease}
-.bar.small{height:8px;margin:6px 0}
-
-/* ---------- BUTTONS ---------- */
-button{font-family:inherit}
-.btn{
-  font-size:.92rem;font-weight:700;
-  padding:11px 20px;border-radius:12px;cursor:pointer;
-  border:1px solid var(--border);background:var(--light);color:var(--navy);
-  transition:transform .08s ease, background .15s, opacity .15s;
-}
-.btn:hover{background:var(--pastel)}
-.btn:active{transform:scale(.98)}
-.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
-.btn.primary:hover{filter:brightness(1.08)}
-.btn.ghost{background:transparent}
-.btn.danger{background:var(--redbg);color:var(--red);border-color:var(--red)}
-.btn:disabled{opacity:.5;cursor:not-allowed}
-.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.actions .btn{flex:1 1 170px}
-
-/* ---------- PRACTICE ---------- */
-.practice-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
-.part-label{font-size:.78rem;font-weight:800;letter-spacing:.4px;color:var(--accent);text-transform:uppercase}
-.counter{font-size:.82rem;color:var(--muted);font-weight:700}
-.qtext{font-size:1.12rem;font-weight:600;color:var(--navy);margin:14px 0 16px;line-height:1.55}
-.qtext .tag{
-  display:inline-block;font-size:.68rem;letter-spacing:.5px;text-transform:uppercase;
-  background:var(--pastel);color:var(--accent);border-radius:6px;padding:2px 8px;margin-right:8px;
-  vertical-align:middle;font-weight:800;
-}
-.options{display:flex;flex-direction:column;gap:10px}
-.opt{
-  display:flex;align-items:center;gap:12px;
-  width:100%;text-align:left;cursor:pointer;
-  padding:13px 15px;border-radius:12px;
-  border:1.5px solid var(--border);background:var(--card);color:var(--text);
-  font-size:1rem;font-weight:600;
-  transition:border-color .15s,background .15s;
-}
-.opt:hover{border-color:var(--accent)}
-.opt .key{
-  flex:0 0 28px;height:28px;border-radius:8px;background:var(--light);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.8rem;font-weight:800;color:var(--navy);
-}
-.opt.selected{border-color:var(--accent);background:var(--pastel)}
-.opt.selected .key{background:var(--accent);color:#fff}
-.opt.correct{border-color:var(--green);background:var(--greenbg)}
-.opt.correct .key{background:var(--green);color:#fff}
-.opt.wrong{border-color:var(--red);background:var(--redbg)}
-.opt.wrong .key{background:var(--red);color:#fff}
-.opt:disabled{cursor:default}
-
-.answer-input{
-  width:100%;padding:14px 16px;font-size:1.05rem;font-weight:600;
-  border-radius:12px;border:1.5px solid var(--border);
-  background:var(--card);color:var(--text);outline:none;
-  transition:border-color .15s;
-}
-.answer-input:focus{border-color:var(--accent)}
-.answer-input:disabled{opacity:.85}
-.answer-input.correct{border-color:var(--green);background:var(--greenbg)}
-.answer-input.wrong{border-color:var(--red);background:var(--redbg)}
-.hint{font-size:.84rem;color:var(--muted);margin-top:8px}
-
-.practice-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.practice-actions .btn{flex:1 1 130px}
-
-/* ---------- FEEDBACK ---------- */
-.feedback{margin-top:16px;padding:15px 16px;border-radius:14px;font-size:.94rem;display:none;line-height:1.6}
-.feedback.show{display:block}
-.feedback.ok{background:var(--greenbg);border:1.5px solid var(--green);color:var(--text)}
-.feedback.no{background:var(--redbg);border:1.5px solid var(--red);color:var(--text)}
-.feedback .fb-title{font-weight:800;font-size:1rem;margin-bottom:6px;display:flex;align-items:center;gap:8px}
-.feedback.ok .fb-title{color:var(--green)}
-.feedback.no .fb-title{color:var(--red)}
-.feedback .fb-row{margin:4px 0}
-.feedback .fb-row b{color:var(--navy)}
-.feedback .ans-pill{
-  display:inline-block;background:var(--card);border:1px solid var(--border);
-  border-radius:8px;padding:1px 10px;font-weight:800;color:var(--navy);
-}
-.feedback .contrast{
-  margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);
-  font-size:.88rem;color:var(--muted);
-}
-
-/* ---------- CHIPS ---------- */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.chip{
-  font-size:.8rem;font-weight:700;padding:7px 13px;border-radius:99px;
-  border:1px solid var(--border);background:var(--light);color:var(--navy);cursor:pointer;
-  transition:background .15s;
-}
-.chip:hover{background:var(--pastel)}
-.chip.flagged{background:var(--pastel);border-color:var(--accent);color:var(--accent)}
-.chip.current{background:var(--accent);color:#fff;border-color:transparent}
-
-/* ---------- RESULTS ---------- */
-.score-big{font-size:3rem;font-weight:900;color:var(--navy);line-height:1;text-align:center}
-.score-sub{text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:14px}
-.rating{
-  text-align:center;font-weight:800;font-size:1.05rem;padding:10px;
-  border-radius:12px;background:var(--pastel);color:var(--accent);margin-bottom:16px;
-}
-.section-row{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
-.section-row .sr-head{display:flex;justify-content:space-between;font-size:.86rem;font-weight:700;color:var(--navy);gap:10px}
-.section-row .sr-head span:last-child{color:var(--muted);white-space:nowrap}
-.wrong-item{
-  border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;
-  background:var(--light);font-size:.9rem;
-}
-.wrong-item .wq{font-weight:700;color:var(--navy);margin-bottom:6px}
-.wrong-item .wa{font-size:.85rem}
-.wrong-item .wa .bad{color:var(--red);font-weight:700}
-.wrong-item .wa .good{color:var(--green);font-weight:700}
-.wrong-item .wexp{font-size:.84rem;color:var(--muted);margin-top:6px}
-
-/* ---------- NOTES ---------- */
-.notes details{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:0;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;
-}
-.notes summary{
-  cursor:pointer;padding:16px 18px;font-weight:800;color:var(--navy);font-size:1rem;
-  list-style:none;display:flex;align-items:center;gap:10px;
-}
-.notes summary::-webkit-details-marker{display:none}
-.notes summary::before{
-  content:"▸";color:var(--accent);font-size:1rem;transition:transform .2s;display:inline-block;
-}
-.notes details[open] summary::before{transform:rotate(90deg)}
-.notes .note-body{padding:0 18px 18px;font-size:.93rem}
-.notes h4{margin:14px 0 6px;font-size:.88rem;text-transform:uppercase;letter-spacing:.5px;color:var(--accent)}
-.notes ul{margin:6px 0;padding-left:20px}
-.notes li{margin:4px 0}
-.notes code{
-  background:var(--light);border:1px solid var(--border);border-radius:6px;
-  padding:1px 6px;font-size:.88em;color:var(--navy);font-weight:700;
-}
-.notes .vi{color:var(--muted);font-size:.88em}
-.notes .ex{background:var(--light);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0}
-.notes .warn{background:var(--redbg);border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0}
-.notes table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.88rem}
-.notes th,.notes td{border:1px solid var(--border);padding:7px 9px;text-align:left}
-.notes th{background:var(--light);color:var(--navy);font-weight:800}
-
-/* ---------- MISC ---------- */
-.small-note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:10px}
-.empty-state{text-align:center;color:var(--muted);padding:26px 10px;font-size:.95rem}
-
-@media (max-width:640px){
-  main{padding:12px 10px 70px}
-  .card{padding:16px;border-radius:14px}
-  .hero h1{font-size:1.25rem}
-  .qtext{font-size:1.02rem}
-  .nav button{font-size:.76rem;padding:7px 9px}
-  .brand span{display:none}
-  .btn{padding:10px 16px;font-size:.88rem}
-  .practice-actions .btn{flex:1 1 46%}
-  .score-big{font-size:2.4rem}
-}
-</style>
-</head>
-<body>
-
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">📘</div>
-    <div>
-      <strong>Prepositions of Time</strong>
-      <span>100 Exercises · A1–B2</span>
-    </div>
-  </div>
-  <nav class="nav" id="nav">
-    <button data-view="dashboard" class="active">Dashboard</button>
-    <button data-view="practice">Practice</button>
-    <button data-view="review">Review Mistakes</button>
-    <button data-view="results">Results</button>
-    <button data-view="notes">Grammar Notes</button>
-    <button id="themeBtn" title="Dark mode">🌙</button>
-  </nav>
-</header>
-
-<main>
-
-  <!-- ================= DASHBOARD ================= -->
-  <section id="view-dashboard" class="view active">
-    <div class="card hero">
-      <h1>PREPOSITIONS OF TIME</h1>
-      <h2>100 EXERCISES</h2>
-      <p>English Grammar Practice – A1 to B2</p>
-      <div class="badges">
-        <span class="badge">5 Parts</span>
-        <span class="badge">Instant Feedback</span>
-        <span class="badge">LocalStorage</span>
-        <span class="badge">Offline</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Thống kê của bạn</h3>
-      <div class="grid" id="statsGrid"></div>
-      <div class="bar"><div id="dashBar"></div></div>
-      <p class="small-note" id="dashProgressText">0 / 100 câu đã hoàn thành</p>
-    </div>
-
-    <div class="card">
-      <h3>Bắt đầu</h3>
-      <div class="actions">
-        <button class="btn primary" id="startBtn">▶ Start Learning</button>
-        <button class="btn" id="continueBtn">⏩ Continue Learning</button>
-        <button class="btn" id="reviewBtn">🔁 Review Mistakes</button>
-        <button class="btn danger" id="resetBtn">🗑 Reset Progress</button>
-      </div>
-      <p class="small-note">Start Learning sẽ xáo trộn thứ tự 100 câu và bắt đầu lượt luyện tập mới.</p>
-    </div>
-  </section>
-
-  <!-- ================= PRACTICE ================= -->
-  <section id="view-practice" class="view">
-    <div class="card">
-      <div class="practice-head">
-        <span class="part-label" id="partLabel">PART 1</span>
-        <span class="counter" id="qCounter">Câu 1 / 100</span>
-      </div>
-      <div class="bar small"><div id="practiceBar"></div></div>
-
-      <div id="questionArea"></div>
-      <div id="feedback" class="feedback"></div>
-
-      <div class="practice-actions">
-        <button class="btn" id="prevBtn">← Previous</button>
-        <button class="btn" id="flagBtn">☆ Đánh dấu</button>
-        <button class="btn primary" id="submitBtn">Submit</button>
-        <button class="btn primary" id="nextBtn">Next →</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Chuyển nhanh đến phần</h3>
-      <div class="chips" id="partChips"></div>
-      <h3 style="margin-top:16px">Câu đã đánh dấu</h3>
-      <div class="chips" id="flagChips"></div>
-    </div>
-  </section>
-
-  <!-- ================= REVIEW ================= -->
-  <section id="view-review" class="view">
-    <div class="card">
-      <h3>Review Mistakes – Ôn tập câu sai</h3>
-      <p class="small-note" style="text-align:left;margin:0 0 12px">
-        Chế độ này chỉ hiển thị những câu bạn đã trả lời sai. Làm lại đúng câu nào thì câu đó được đánh dấu <b>đã khắc phục</b>.
-      </p>
-      <div class="actions" style="justify-content:flex-start">
-        <button class="btn primary" id="startReviewBtn">🔁 Bắt đầu ôn câu sai</button>
-        <button class="btn" id="clearReviewBtn">Xoá lịch sử ôn tập</button>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Danh sách câu sai</h3>
-      <div id="reviewList"></div>
-    </div>
-  </section>
-
-  <!-- ================= RESULTS ================= -->
-  <section id="view-results" class="view">
-    <div class="card">
-      <h3>Kết quả tổng hợp</h3>
-      <div id="resultsArea"></div>
-    </div>
-  </section>
-
-  <!-- ================= NOTES ================= -->
-  <section id="view-notes" class="view">
-    <div class="card">
-      <h3>Grammar Notes – Lý thuyết giới từ chỉ thời gian</h3>
-      <p class="small-note" style="text-align:left;margin:0">
-        10 chủ điểm: định nghĩa, cách dùng, cấu trúc, ví dụ, lỗi thường gặp và so sánh các giới từ dễ nhầm.
-      </p>
-    </div>
-    <div class="notes" id="notesArea"></div>
-  </section>
-
-</main>
-
-<script>
-/* =========================================================
-   1. DATA – 100 QUESTIONS (nguyên văn nội dung gốc)
-   ========================================================= */
-
-const QUESTIONS = [
-/* ---------------- PART 1: AT – IN – ON (1–20) ---------------- */
-{id:1,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"My English class starts ______ 7:00 a.m.",
- opts:["in","on","at","by"],ans:2,
- exp:"AT + giờ cụ thể (clock time): at 7:00 a.m. = vào lúc 7 giờ sáng.",
- con:"AT + giờ · IN + tháng/năm/mùa · ON + ngày/thứ."},
-
-{id:2,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"My birthday is ______ November.",
- opts:["at","in","on","for"],ans:1,
- exp:"IN + tháng: in November = vào tháng 11.",
- con:"IN November (tháng) nhưng ON 12th November (ngày cụ thể)."},
-
-{id:3,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"We usually visit our grandparents ______ Sundays.",
- opts:["in","at","on","by"],ans:2,
- exp:"ON + thứ trong tuần. Dạng số nhiều “Sundays” = lặp lại vào các ngày Chủ nhật.",
- con:"ON Monday / ON Sundays (ngày, thứ) · IN the morning (buổi)."},
-
-{id:4,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"She was born ______ 2005.",
- opts:["on","at","in","for"],ans:2,
- exp:"IN + năm: in 2005.",
- con:"IN 2005 (năm) · ON 5th May (ngày) · AT 5 o'clock (giờ)."},
-
-{id:5,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"I often study English ______ the evening.",
- opts:["on","at","in","by"],ans:2,
- exp:"IN + the morning / the afternoon / the evening.",
- con:"Ngoại lệ: AT night (không dùng “in the night” với nghĩa thông thường)."},
-
-{id:6,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"The meeting begins ______ half past eight.",
- opts:["in","on","at","since"],ans:2,
- exp:"AT + giờ: at half past eight = lúc 8 giờ 30.",
- con:"AT dùng cho mọi mốc giờ cụ thể, kể cả giờ nói bằng chữ."},
-
-{id:7,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"We usually go swimming ______ summer.",
- opts:["at","in","on","for"],ans:1,
- exp:"IN + mùa: in summer.",
- con:"IN summer · IN July · IN 2024 – đều là khoảng thời gian dài."},
-
-{id:8,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"The school festival will take place ______ 15th December.",
- opts:["in","at","on","by"],ans:2,
- exp:"ON + ngày cụ thể có số: on 15th December.",
- con:"ON 15th December (ngày) · IN December (chỉ tháng)."},
-
-{id:9,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"My father usually gets up ______ dawn.",
- opts:["in","at","on","for"],ans:1,
- exp:"AT dawn = vào lúc bình minh (cụm cố định).",
- con:"AT dawn / AT noon / AT midnight / AT dusk – các mốc trong ngày."},
-
-{id:10,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"I don’t like walking alone ______ night.",
- opts:["on","in","at","by"],ans:2,
- exp:"AT night = vào ban đêm (cụm cố định).",
- con:"AT night (chung) · IN the night (trong một đêm cụ thể, ít gặp)."},
-
-{id:11,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"They got married ______ Valentine’s Day.",
- opts:["at","in","on","for"],ans:2,
- exp:"ON + ngày lễ có chữ “Day”: on Valentine's Day.",
- con:"ON Christmas Day (ngày cụ thể) · AT Christmas (dịp lễ nói chung)."},
-
-{id:12,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"My parents moved to Can Tho ______ 2018.",
- opts:["at","in","on","by"],ans:1,
- exp:"IN + năm: in 2018.",
- con:"IN 2018 (năm) · ON 1st January 2018 (ngày cụ thể)."},
-
-{id:13,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"The train arrives ______ noon.",
- opts:["in","on","at","during"],ans:2,
- exp:"AT noon = đúng 12 giờ trưa.",
- con:"AT noon · AT midnight · IN the afternoon."},
-
-{id:14,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"We often go shopping ______ the weekend.",
- opts:["at","in","on","since"],ans:0,
- exp:"AT the weekend (cách nói Anh–Anh). Người Mỹ dùng ON the weekend.",
- con:"BrE: AT the weekend · AmE: ON the weekend."},
-
-{id:15,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"The new semester begins ______ September.",
- opts:["at","on","in","for"],ans:2,
- exp:"IN + tháng: in September.",
- con:"IN September · ON 5th September."},
-
-{id:16,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"I have an important examination ______ Monday morning.",
- opts:["at","on","in","by"],ans:1,
- exp:"Có ngày/thứ thì dùng ON, kể cả khi thêm buổi: on Monday morning.",
- con:"ON Monday morning · IN the morning (không có thứ)."},
-
-{id:17,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"People often make resolutions ______ New Year’s Day.",
- opts:["in","at","on","for"],ans:2,
- exp:"ON + ngày lễ có “Day”: on New Year's Day.",
- con:"ON New Year's Day · AT New Year (dịp Tết nói chung)."},
-
-{id:18,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"My grandmother was born ______ the 1960s.",
- opts:["at","on","in","by"],ans:2,
- exp:"IN + thập kỷ: in the 1960s = vào những năm 1960.",
- con:"IN the 1960s · IN the 20th century."},
-
-{id:19,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"The children usually have lunch ______ lunchtime.",
- opts:["in","on","at","for"],ans:2,
- exp:"AT lunchtime = vào giờ ăn trưa (cụm cố định).",
- con:"AT lunchtime / AT breakfast time / AT dinnertime."},
-
-{id:20,part:1,type:"mcq",topic:"AT – IN – ON",
- q:"I prefer studying ______ the morning.",
- opts:["at","in","on","by"],ans:1,
- exp:"IN the morning = vào buổi sáng.",
- con:"IN the morning · AT night · ON Monday morning."},
-
-/* ---------------- PART 2: GAP FILLING (21–40) ---------------- */
-{id:21,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"I have studied English ______ three years.",
- ans:["for"],
- exp:"FOR + khoảng thời gian (three years) trả lời câu hỏi “How long?”.",
- con:"FOR three years (độ dài) · SINCE 2022 (mốc bắt đầu)."},
-
-{id:22,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"She has worked at this company ______ 2022.",
- ans:["since"],
- exp:"SINCE + mốc thời gian bắt đầu (2022).",
- con:"SINCE 2022 (mốc) · FOR three years (khoảng)."},
-
-{id:23,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"Nobody is allowed to use mobile phones ______ the examination.",
- ans:["during"],
- exp:"DURING + danh từ chỉ sự kiện/khoảng thời gian: during the examination.",
- con:"DURING + danh từ · WHILE + mệnh đề."},
-
-{id:24,part:2,type:"fill",topic:"BY – UNTIL – TILL",
- q:"You must submit your assignment ______ Friday.",
- ans:["by"],
- exp:"BY + hạn chót = không muộn hơn thứ Sáu (có thể sớm hơn).",
- con:"BY Friday (hạn chót) · UNTIL Friday (kéo dài đến thứ Sáu)."},
-
-{id:25,part:2,type:"fill",topic:"BY – UNTIL – TILL",
- q:"I will wait here ______ you come back.",
- ans:["until","till"],
- exp:"UNTIL + mốc kết thúc: hành động “wait” kéo dài đến khi bạn quay lại.",
- con:"UNTIL/TILL + mốc kết thúc · BY + hạn chót."},
-
-{id:26,part:2,type:"fill",topic:"BEFORE – AFTER",
- q:"Please wash your hands ______ eating.",
- ans:["before"],
- exp:"BEFORE + V-ing: before eating = trước khi ăn.",
- con:"BEFORE eating (trước) · AFTER eating (sau)."},
-
-{id:27,part:2,type:"fill",topic:"BEFORE – AFTER",
- q:"We usually go for a walk ______ dinner.",
- ans:["after"],
- exp:"AFTER + danh từ: after dinner = sau bữa tối.",
- con:"AFTER + N/V-ing/mệnh đề."},
-
-{id:28,part:2,type:"fill",topic:"FROM – TO – BETWEEN – AND",
- q:"The library is open ______ Monday ______ Saturday.",
- ans:["from to"],
- exp:"Cấu trúc FROM + mốc bắt đầu … TO + mốc kết thúc: from Monday to Saturday.",
- con:"FROM … TO (liên tục) · BETWEEN … AND (khoảng giữa)."},
-
-{id:29,part:2,type:"fill",topic:"WITHIN – THROUGHOUT – OVER",
- q:"The manager expects everyone to finish the project ______ two weeks.",
- ans:["within"],
- exp:"WITHIN + khoảng thời gian = trong vòng (trước khi hết) hai tuần.",
- con:"WITHIN two weeks (trong vòng) · AFTER two weeks (sau hai tuần)."},
-
-{id:30,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"He has been interested in music ______ he was a child.",
- ans:["since"],
- exp:"SINCE + mệnh đề chỉ mốc bắt đầu: since he was a child.",
- con:"SINCE + mệnh đề/mốc · FOR + khoảng thời gian."},
-
-{id:31,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"My brother slept ______ the entire afternoon.",
- ans:["during"],
- exp:"DURING + danh từ: during the entire afternoon = suốt cả buổi chiều.",
- con:"DURING + cụm danh từ · FOR + độ dài (for five hours)."},
-
-{id:32,part:2,type:"fill",topic:"BY – UNTIL – TILL",
- q:"You should arrive at the airport ______ 6 p.m. to catch your flight.",
- ans:["by"],
- exp:"BY 6 p.m. = trước hoặc đúng 6 giờ (hạn chót để kịp chuyến bay).",
- con:"BY + hạn chót · UNTIL + mốc kết thúc kéo dài."},
-
-{id:33,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"The shop remained closed ______ the storm.",
- ans:["during"],
- exp:"DURING + danh từ chỉ sự việc: during the storm = trong cơn bão.",
- con:"DURING + danh từ · WHILE + mệnh đề."},
-
-{id:34,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"She worked ______ five hours without taking a break.",
- ans:["for"],
- exp:"FOR + khoảng thời gian: for five hours = trong năm giờ liền.",
- con:"FOR five hours (độ dài) · DURING the meeting (sự kiện)."},
-
-{id:35,part:2,type:"fill",topic:"BY – UNTIL – TILL",
- q:"Please stay here ______ further instructions.",
- ans:["until","till"],
- exp:"UNTIL + mốc: stay here until further instructions = ở lại cho đến khi có hướng dẫn tiếp theo.",
- con:"UNTIL/TILL further notice cũng là cụm rất thường gặp."},
-
-{id:36,part:2,type:"fill",topic:"FROM – TO – BETWEEN – AND",
- q:"The course runs ______ January ______ March.",
- ans:["from to"],
- exp:"FROM January TO March = từ tháng 1 đến tháng 3.",
- con:"FROM … TO … (từ … đến …)."},
-
-{id:37,part:2,type:"fill",topic:"BY – UNTIL – TILL",
- q:"We need to complete this task ______ the end of the day.",
- ans:["by"],
- exp:"BY the end of the day = trước khi hết ngày (hạn chót).",
- con:"BY + hạn chót · UNTIL + mốc kết thúc."},
-
-{id:38,part:2,type:"fill",topic:"FOR – SINCE – DURING",
- q:"He hasn’t visited his hometown ______ last summer.",
- ans:["since"],
- exp:"SINCE + mốc bắt đầu: since last summer = kể từ mùa hè năm ngoái.",
- con:"SINCE last summer · FOR a year."},
-
-{id:39,part:2,type:"fill",topic:"BEFORE – AFTER",
- q:"I usually review my lessons ______ going to bed.",
- ans:["before"],
- exp:"BEFORE + V-ing: before going to bed = trước khi đi ngủ.",
- con:"BEFORE + V-ing/danh từ/mệnh đề."},
-
-{id:40,part:2,type:"fill",topic:"BEFORE – AFTER",
- q:"The students went out for lunch ______ the class had finished.",
- ans:["after"],
- exp:"AFTER + mệnh đề: after the class had finished = sau khi lớp học kết thúc.",
- con:"AFTER + mệnh đề · BEFORE + mệnh đề."},
-
-/* ---------------- PART 3: CHOOSE THE CORRECT PREPOSITION (41–60) ---------------- */
-{id:41,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"I haven’t seen my best friend ______ last Christmas.",
- opts:["for","since","during","by"],ans:1,
- exp:"SINCE + mốc bắt đầu (last Christmas) với thì hiện tại hoàn thành.",
- con:"SINCE last Christmas (mốc) · FOR six months (khoảng)."},
-
-{id:42,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"We stayed at home ______ the heavy rain.",
- opts:["during","since","for","until"],ans:0,
- exp:"DURING + danh từ: during the heavy rain = trong lúc mưa to.",
- con:"DURING + danh từ · FOR + khoảng thời gian."},
-
-{id:43,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"She has been learning Chinese ______ six months.",
- opts:["since","during","for","by"],ans:2,
- exp:"FOR + khoảng thời gian (six months).",
- con:"FOR six months · SINCE January."},
-
-{id:44,part:3,type:"mcq",topic:"BY – UNTIL – TILL",
- q:"You must return these books ______ next Monday.",
- opts:["until","by","since","during"],ans:1,
- exp:"BY + hạn chót: by next Monday = trước thứ Hai tới.",
- con:"BY (hạn chót) · UNTIL (kéo dài đến)."},
-
-{id:45,part:3,type:"mcq",topic:"BY – UNTIL – TILL",
- q:"I will stay here ______ 10 p.m.",
- opts:["by","since","until","for"],ans:2,
- exp:"UNTIL 10 p.m. = ở lại cho đến 10 giờ tối (hành động kéo dài).",
- con:"UNTIL + mốc kết thúc · BY + hạn chót."},
-
-{id:46,part:3,type:"mcq",topic:"BEFORE – AFTER",
- q:"He left the office ______ finishing his work.",
- opts:["after","during","since","by"],ans:0,
- exp:"AFTER + V-ing: after finishing his work = sau khi làm xong việc.",
- con:"AFTER + V-ing · BEFORE + V-ing."},
-
-{id:47,part:3,type:"mcq",topic:"BEFORE – AFTER",
- q:"Please call me ______ you arrive home.",
- opts:["before","during","for","since"],ans:0,
- exp:"BEFORE + mệnh đề: before you arrive home = trước khi bạn về đến nhà.",
- con:"BEFORE + mệnh đề (trước khi) · AFTER + mệnh đề (sau khi)."},
-
-{id:48,part:3,type:"mcq",topic:"FROM – TO – BETWEEN – AND",
- q:"The museum is open ______ 9 a.m. to 5 p.m.",
- opts:["since","from","during","by"],ans:1,
- exp:"FROM 9 a.m. TO 5 p.m. = từ 9 giờ sáng đến 5 giờ chiều.",
- con:"FROM … TO … là cặp cố định."},
-
-{id:49,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"I haven’t eaten anything ______ this morning.",
- opts:["for","during","since","by"],ans:2,
- exp:"SINCE this morning = kể từ sáng nay (mốc bắt đầu).",
- con:"SINCE + mốc · FOR + khoảng thời gian."},
-
-{id:50,part:3,type:"mcq",topic:"WITHIN – THROUGHOUT – OVER",
- q:"She completed her homework ______ two hours.",
- opts:["since","within","until","during"],ans:1,
- exp:"WITHIN two hours = trong vòng hai giờ (không quá hai giờ).",
- con:"WITHIN (trong vòng) · AFTER (sau) · FOR (kéo dài)."},
-
-{id:51,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"We have lived in this neighbourhood ______ 2019.",
- opts:["for","during","since","by"],ans:2,
- exp:"SINCE + mốc năm: since 2019.",
- con:"SINCE 2019 · FOR six years."},
-
-{id:52,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"He usually reads books ______ the journey.",
- opts:["during","since","until","by"],ans:0,
- exp:"DURING + danh từ: during the journey = trong suốt chuyến đi.",
- con:"DURING + danh từ · WHILE + mệnh đề."},
-
-{id:53,part:3,type:"mcq",topic:"BY – UNTIL – TILL",
- q:"I will have finished the report ______ tomorrow morning.",
- opts:["until","by","since","for"],ans:1,
- exp:"BY + hạn chót: by tomorrow morning = trước sáng mai.",
- con:"BY + hạn chót · UNTIL + mốc kết thúc."},
-
-{id:54,part:3,type:"mcq",topic:"BY – UNTIL – TILL",
- q:"The children played outside ______ sunset.",
- opts:["until","since","for","by"],ans:0,
- exp:"UNTIL sunset = chơi cho đến khi mặt trời lặn.",
- con:"UNTIL + mốc kết thúc · BY + hạn chót."},
-
-{id:55,part:3,type:"mcq",topic:"BEFORE – AFTER",
- q:"We had dinner ______ watching the film.",
- opts:["during","before","since","for"],ans:1,
- exp:"BEFORE + V-ing: before watching the film = trước khi xem phim.",
- con:"BEFORE + V-ing · AFTER + V-ing."},
-
-{id:56,part:3,type:"mcq",topic:"BY – UNTIL – TILL",
- q:"The shop will remain open ______ further notice.",
- opts:["until","by","since","during"],ans:0,
- exp:"UNTIL further notice = cho đến khi có thông báo mới (cụm cố định).",
- con:"UNTIL further notice · BY the end of the week."},
-
-{id:57,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"She has been absent ______ three days.",
- opts:["since","for","during","by"],ans:1,
- exp:"FOR + khoảng thời gian (three days).",
- con:"FOR three days · SINCE Monday."},
-
-{id:58,part:3,type:"mcq",topic:"WITHIN – THROUGHOUT – OVER",
- q:"The students must finish the test ______ the allotted time.",
- opts:["within","since","until","for"],ans:0,
- exp:"WITHIN the allotted time = trong khoảng thời gian được cho phép.",
- con:"WITHIN (trong vòng) · DURING (trong lúc diễn ra)."},
-
-{id:59,part:3,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"We talked about our future plans ______ the meeting.",
- opts:["since","during","until","by"],ans:1,
- exp:"DURING the meeting = trong lúc cuộc họp diễn ra.",
- con:"DURING + danh từ · WHILE + mệnh đề."},
-
-{id:60,part:3,type:"mcq",topic:"BEFORE – AFTER",
- q:"I usually feel sleepy ______ having a big lunch.",
- opts:["before","after","during","since"],ans:1,
- exp:"AFTER + V-ing: after having a big lunch = sau khi ăn trưa nhiều.",
- con:"AFTER + V-ing · BEFORE + V-ing."},
-
-/* ---------------- PART 4: ERROR CORRECTION (61–75) ---------------- */
-{id:61,part:4,type:"error",topic:"AT – IN – ON",
- q:"I was born on 2004.",
- ans:["in"], fixed:"I was born in 2004.",
- exp:"Năm đi với IN. “2004” là một năm, không phải một ngày cụ thể.",
- con:"IN 2004 (năm) · ON 5th May 2004 (ngày)."},
-
-{id:62,part:4,type:"error",topic:"AT – IN – ON",
- q:"We usually have breakfast in 7 a.m.",
- ans:["at"], fixed:"We usually have breakfast at 7 a.m.",
- exp:"Giờ cụ thể luôn đi với AT.",
- con:"AT 7 a.m. (giờ) · IN the morning (buổi)."},
-
-{id:63,part:4,type:"error",topic:"AT – IN – ON",
- q:"My English examination is in Monday.",
- ans:["on"], fixed:"My English examination is on Monday.",
- exp:"Thứ trong tuần đi với ON.",
- con:"ON Monday · IN Monday? ✗"},
-
-{id:64,part:4,type:"error",topic:"FOR – SINCE – DURING",
- q:"She has lived here for 2020.",
- ans:["since"], fixed:"She has lived here since 2020.",
- exp:"2020 là mốc bắt đầu → dùng SINCE, không dùng FOR.",
- con:"SINCE 2020 (mốc) · FOR six years (khoảng)."},
-
-{id:65,part:4,type:"error",topic:"FOR – SINCE – DURING",
- q:"I waited since two hours for the bus.",
- ans:["for"], fixed:"I waited for two hours for the bus.",
- exp:"“two hours” là khoảng thời gian → dùng FOR.",
- con:"FOR two hours (độ dài) · SINCE 2 p.m. (mốc)."},
-
-{id:66,part:4,type:"error",topic:"AT – IN – ON",
- q:"He usually goes jogging on the morning.",
- ans:["in"], fixed:"He usually goes jogging in the morning.",
- exp:"Buổi trong ngày dùng IN: in the morning / afternoon / evening.",
- con:"IN the morning · AT night · ON Monday morning."},
-
-{id:67,part:4,type:"error",topic:"Special cases",
- q:"They arrived to the airport at midnight.",
- ans:["at"], fixed:"They arrived at the airport at midnight.",
- exp:"Động từ ARRIVE đi với AT (địa điểm nhỏ) / IN (thành phố), không dùng “arrive to”. “At midnight” thì đã đúng.",
- con:"arrive AT the airport · arrive IN Hanoi · arrive home (không giới từ)."},
-
-{id:68,part:4,type:"error",topic:"BY – UNTIL – TILL",
- q:"I will stay here by you return.",
- ans:["until","till"], fixed:"I will stay here until you come back.",
- exp:"Hành động “stay” kéo dài đến một mốc → dùng UNTIL/TILL, không dùng BY.",
- con:"UNTIL you come back (kéo dài đến) · BY 6 p.m. (hạn chót)."},
-
-{id:69,part:4,type:"error",topic:"FOR – SINCE – DURING",
- q:"She has been studying English during three years.",
- ans:["for"], fixed:"She has been studying English for three years.",
- exp:"DURING đi với danh từ chỉ sự kiện; độ dài thời gian dùng FOR.",
- con:"FOR three years · DURING the lesson."},
-
-{id:70,part:4,type:"error",topic:"AT – IN – ON",
- q:"The shop closes until 9 p.m. every day. (Ý định: cửa hàng đóng cửa lúc 9 giờ tối.)",
- ans:["at"], fixed:"The shop closes at 9 p.m. every day.",
- exp:"Đóng cửa vào một mốc giờ cụ thể → AT 9 p.m.",
- con:"closes AT 9 p.m. (mốc) · is open UNTIL 9 p.m. (kéo dài đến)."},
-
-{id:71,part:4,type:"error",topic:"AT – IN – ON",
- q:"We usually visit our relatives in Christmas Day.",
- ans:["on"], fixed:"We usually visit our relatives on Christmas Day.",
- exp:"Ngày lễ có chữ “Day” dùng ON.",
- con:"ON Christmas Day (ngày) · AT Christmas (dịp lễ chung)."},
-
-{id:72,part:4,type:"error",topic:"BEFORE – AFTER",
- q:"He left the room during the meeting ended.",
- ans:["after"], fixed:"He left the room after the meeting ended.",
- exp:"DURING + danh từ, không đi với mệnh đề. Trước mệnh đề dùng AFTER/WHEN.",
- con:"DURING the meeting · AFTER the meeting ended."},
-
-{id:73,part:4,type:"error",topic:"FOR – SINCE – DURING",
- q:"I haven’t seen him for last week.",
- ans:["since"], fixed:"I haven’t seen him since last week.",
- exp:"“last week” là mốc bắt đầu → SINCE.",
- con:"SINCE last week (mốc) · FOR a week (khoảng)."},
-
-{id:74,part:4,type:"error",topic:"BY – UNTIL – TILL",
- q:"She will finish the assignment until Friday. (Ý định: hạn chót là thứ Sáu.)",
- ans:["by"], fixed:"She will finish the assignment by Friday.",
- exp:"Hạn chót (không muộn hơn thứ Sáu) → BY.",
- con:"BY Friday (hạn chót) · UNTIL Friday (kéo dài đến thứ Sáu)."},
-
-{id:75,part:4,type:"error",topic:"AT – IN – ON",
- q:"I usually go to bed in midnight.",
- ans:["at"], fixed:"I usually go to bed at midnight.",
- exp:"Midnight là mốc thời gian cố định → AT midnight.",
- con:"AT midnight / AT noon / AT dawn."},
-
-/* ---------------- PART 5: MIXED (76–100) ---------------- */
-{id:76,part:5,type:"mcq",topic:"FOR – SINCE – DURING",
- q:"I haven’t spoken to her ______ Monday.",
- opts:["for","since","during","by"],ans:1,
- exp:"SINCE + mốc thời gian (Monday).",
- con:"SINCE Monday · FOR two days."},
-
-{id:77,part:5,type:"mcq",topic:"AGO – IN – LATER",
- q:"My brother graduated from university three years ______.",
- opts:["later","since","ago","for"],ans:2,
- exp:"AGO đứng SAU khoảng thời gian và dùng với thì quá khứ: three years ago.",
- con:"three years AGO (quá khứ) · IN three years (tương lai)."},
-
-{id:78,part:5,type:"mcq",topic:"Zero prepositions",
- q:"I’ll see you ______ next Friday.",
- opts:["on","at","in","No preposition"],ans:3,
- exp:"Trước NEXT / LAST / THIS / EVERY + thời gian, KHÔNG dùng giới từ.",
- con:"next Friday ✓ · on next Friday ✗"},
-
-{id:79,part:5,type:"mcq",topic:"Fixed expressions & special cases",
- q:"We arrived just ______ time to catch the last bus.",
- opts:["on","in","at","by"],ans:1,
- exp:"IN TIME = kịp lúc (trước khi quá muộn).",
- con:"IN time = kịp · ON time = đúng giờ."},
-
-{id:80,part:5,type:"mcq",topic:"Fixed expressions & special cases",
- q:"The train arrived ______ time, exactly at 8:30.",
- opts:["in","at","on","for"],ans:2,
- exp:"ON TIME = đúng giờ như đã định.",
- con:"ON time (đúng giờ) · IN time (kịp lúc)."},
-
-{id:81,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"I have been waiting here ______ a long time.",
- ans:["for"],
- exp:"FOR + khoảng thời gian: for a long time.",
- con:"FOR a long time · SINCE 8 a.m."},
-
-{id:82,part:5,type:"fill",topic:"Fixed expressions & special cases",
- q:"The company was established ______ the beginning of 2010.",
- ans:["at"],
- exp:"AT the beginning of + mốc thời gian = vào đầu năm 2010.",
- con:"AT the beginning of 2010 · IN the end (cuối cùng)."},
-
-{id:83,part:5,type:"fill",topic:"Fixed expressions & special cases",
- q:"We usually exchange gifts ______ Christmas.",
- ans:["at"],
- exp:"AT Christmas = vào dịp Giáng sinh (nói chung).",
- con:"AT Christmas (dịp) · ON Christmas Day (ngày cụ thể)."},
-
-{id:84,part:5,type:"fill",topic:"BY – UNTIL – TILL",
- q:"I haven’t finished my homework ______ now.",
- ans:["until","till","by"],
- exp:"UNTIL now = cho đến tận bây giờ. (Trong một số ngữ cảnh, “by now” cũng được chấp nhận.)",
- con:"UNTIL now (cho đến nay) · BY now (tính đến giờ)."},
-
-{id:85,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"The students must remain silent ______ the lesson.",
- ans:["during"],
- exp:"DURING + danh từ: during the lesson = trong suốt tiết học.",
- con:"DURING the lesson · FOR 45 minutes."},
-
-{id:86,part:5,type:"fill",topic:"AT – IN – ON",
- q:"The meeting will take place ______ the end of this month.",
- ans:["at"],
- exp:"AT the end of this month = vào cuối tháng này.",
- con:"AT the end of (cuối) · IN the end (cuối cùng, rốt cuộc)."},
-
-{id:87,part:5,type:"fill",topic:"AGO – IN – LATER",
- q:"She will return ______ a few minutes.",
- ans:["in"],
- exp:"IN + khoảng thời gian với thì tương lai: in a few minutes = vài phút nữa.",
- con:"IN a few minutes (tương lai) · a few minutes AGO (quá khứ)."},
-
-{id:88,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"He has been working here ______ he graduated.",
- ans:["since"],
- exp:"SINCE + mệnh đề chỉ mốc bắt đầu: since he graduated.",
- con:"SINCE + mệnh đề · FOR + khoảng thời gian."},
-
-{id:89,part:5,type:"fill",topic:"FROM – TO – BETWEEN – AND",
- q:"We usually have a short break ______ classes.",
- ans:["between"],
- exp:"BETWEEN + danh từ số nhiều = giữa các tiết học.",
- con:"BETWEEN classes · BETWEEN 9 AND 10."},
-
-{id:90,part:5,type:"fill",topic:"WITHIN – THROUGHOUT – OVER",
- q:"The project must be completed ______ the next three days.",
- ans:["within"],
- exp:"WITHIN the next three days = trong vòng ba ngày tới.",
- con:"WITHIN (trong vòng) · AFTER (sau)."},
-
-{id:91,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"I haven’t visited my hometown ______ ages.",
- ans:["for"],
- exp:"FOR ages = đã rất lâu (cụm thân mật).",
- con:"FOR ages · SINCE 2015."},
-
-{id:92,part:5,type:"fill",topic:"AT – IN – ON",
- q:"She was born ______ 12th May, 2006.",
- ans:["on"],
- exp:"ON + ngày cụ thể có số: on 12th May, 2006.",
- con:"ON 12th May (ngày) · IN May (tháng) · IN 2006 (năm)."},
-
-{id:93,part:5,type:"fill",topic:"BEFORE – AFTER",
- q:"I will call you ______ I finish my assignment.",
- ans:["after","when"],
- exp:"AFTER + mệnh đề = sau khi tôi làm xong bài tập. (“when” cũng chấp nhận được.)",
- con:"AFTER I finish (sau khi) · BEFORE I finish (trước khi)."},
-
-{id:94,part:5,type:"fill",topic:"Fixed expressions & special cases",
- q:"The restaurant is usually crowded ______ weekends. (Sử dụng cách diễn đạt Anh-Anh.)",
- ans:["at"],
- exp:"Anh–Anh: AT weekends / AT the weekend. Anh–Mỹ: ON weekends.",
- con:"BrE: AT weekends · AmE: ON weekends."},
-
-{id:95,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"They have been friends ______ childhood.",
- ans:["since"],
- exp:"SINCE childhood = kể từ thời thơ ấu.",
- con:"SINCE childhood · FOR many years."},
-
-{id:96,part:5,type:"fill",topic:"BY – UNTIL – TILL",
- q:"The children stayed awake ______ midnight.",
- ans:["until","till"],
- exp:"UNTIL midnight = thức cho đến tận nửa đêm.",
- con:"UNTIL midnight (kéo dài đến) · BY midnight (trước nửa đêm)."},
-
-{id:97,part:5,type:"fill",topic:"WITHIN – THROUGHOUT – OVER",
- q:"We should finish the discussion ______ 30 minutes.",
- ans:["within"],
- exp:"WITHIN 30 minutes = trong vòng 30 phút.",
- con:"WITHIN 30 minutes · FOR 30 minutes."},
-
-{id:98,part:5,type:"fill",topic:"Fixed expressions & special cases",
- q:"He moved to London ______ the age of 25.",
- ans:["at"],
- exp:"AT the age of + số tuổi = vào năm 25 tuổi (cụm cố định).",
- con:"AT the age of 25 · WHEN he was 25."},
-
-{id:99,part:5,type:"fill",topic:"FOR – SINCE – DURING",
- q:"I haven’t had a holiday ______ last year.",
- ans:["since"],
- exp:"SINCE + mốc: since last year = kể từ năm ngoái.",
- con:"SINCE last year · FOR a year."},
-
-{id:100,part:5,type:"fill",topic:"WITHIN – THROUGHOUT – OVER",
- q:"The students have to complete the examination ______ two hours.",
- ans:["within"],
- exp:"WITHIN two hours = trong vòng hai giờ (giới hạn thời gian).",
- con:"WITHIN two hours (trong vòng) · FOR two hours (kéo dài hai giờ)."}
-];
-
-/* =========================================================
-   2. VALIDATION – kiểm tra 100 câu, đáp án, trùng lặp
-   ========================================================= */
-(function validateData(){
-  const ids = new Set();
-  let problems = 0;
-  QUESTIONS.forEach(q=>{
-    if(ids.has(q.id)){ console.error("Duplicate id:", q.id); problems++; }
-    ids.add(q.id);
-    if(q.type === "mcq"){
-      if(typeof q.ans !== "number" || q.ans < 0 || q.ans > 3){ console.error("Bad MCQ answer:", q.id); problems++; }
-      if(!Array.isArray(q.opts) || q.opts.length !== 4){ console.error("Bad options:", q.id); problems++; }
-    } else {
-      if(!Array.isArray(q.ans) || q.ans.length === 0){ console.error("Bad fill answer:", q.id); problems++; }
-    }
-    if(!q.exp){ console.warn("Missing explanation:", q.id); }
-  });
-  for(let i = 1; i <= 100; i++){
-    if(!ids.has(i)){ console.error("Missing question id:", i); problems++; }
-  }
-  if(QUESTIONS.length !== 100){ console.error("Question count is", QUESTIONS.length, "expected 100"); problems++; }
-  if(problems === 0){
-    console.log("%c✔ Data OK: 100 questions validated.", "color:#1f8a52;font-weight:bold");
-  }
-})();
-
-const QMAP = {};
-QUESTIONS.forEach(q => { QMAP[q.id] = q; });
-
-const PARTS = {
-  1:{name:"PART 1 – MULTIPLE CHOICE (AT, IN, ON)", short:"PART 1 · AT – IN – ON"},
-  2:{name:"PART 2 – GAP FILLING", short:"PART 2 · GAP FILLING"},
-  3:{name:"PART 3 – CHOOSE THE CORRECT PREPOSITION", short:"PART 3 · CHOOSE THE CORRECT PREPOSITION"},
-  4:{name:"PART 4 – ERROR CORRECTION", short:"PART 4 · ERROR CORRECTION"},
-  5:{name:"PART 5 – MIXED GRAMMAR CHALLENGE", short:"PART 5 · MIXED CHALLENGE"}
-};
-
-const TOPIC_LIST = [
-  "AT – IN – ON",
-  "FOR – SINCE – DURING",
-  "BY – UNTIL – TILL",
-  "BEFORE – AFTER",
-  "FROM – TO – BETWEEN – AND",
-  "WITHIN – THROUGHOUT – OVER",
-  "AGO – IN – LATER",
-  "Zero prepositions",
-  "Fixed expressions & special cases",
-  "Special cases"
-];
-
-/* =========================================================
-   3. STORE / LOCALSTORAGE
-   ========================================================= */
-const STORAGE_KEY = "prepositions_time_100_v1";
-
-const DEFAULT_STORE = {
-  order: [],            // thứ tự câu của lượt hiện tại
-  index: 0,
-  answers: {},          // id -> {value, correct}
-  flags: [],
-  startTime: null,
-  endTime: null,
-  theme: "light",
-  reviewAnswers: {}     // id -> {value, correct, fixed}
-};
-
-let store = loadStore();
-
-function loadStore(){
-  try{
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if(!raw) return JSON.parse(JSON.stringify(DEFAULT_STORE));
-    const s = Object.assign(JSON.parse(JSON.stringify(DEFAULT_STORE)), JSON.parse(raw));
-    if(!Array.isArray(s.order) || s.order.length !== 100){
-      s.order = QUESTIONS.map(q => q.id);
-    }
-    if(!Array.isArray(s.flags)) s.flags = [];
-    if(!s.answers || typeof s.answers !== "object") s.answers = {};
-    if(!s.reviewAnswers || typeof s.reviewAnswers !== "object") s.reviewAnswers = {};
-    return s;
-  }catch(e){
-    console.warn("Cannot load store, using default.", e);
-    return JSON.parse(JSON.stringify(DEFAULT_STORE));
-  }
-}
-
-function saveStore(){
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(store)); }
-  catch(e){ console.warn("Cannot save store", e); }
-}
-
-/* =========================================================
-   4. HELPERS
-   ========================================================= */
-function normalize(str){
-  return (str || "").toLowerCase().replace(/[^a-z]/g, "");
-}
-
-function isCorrect(q, value){
-  if(q.type === "mcq"){
-    return Number(value) === q.ans;
-  }
-  const userNorm = normalize(String(value));
-  if(!userNorm) return false;
-  return q.ans.some(a => normalize(a) === userNorm);
-}
-
-function displayAnswer(q){
-  if(q.type === "mcq") return q.opts[q.ans];
-  return q.ans[0].split(" ").join(" … ");
-}
-
-function userAnswerText(q, value){
-  if(value === undefined || value === null || value === "") return "(chưa trả lời)";
-  if(q.type === "mcq") return q.opts[Number(value)];
-  return String(value);
-}
-
-function shuffle(arr){
-  const a = arr.slice();
-  for(let i = a.length - 1; i > 0; i--){
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function formatDuration(ms){
-  if(!ms || ms < 0) return "—";
-  const totalSec = Math.floor(ms / 1000);
-  const h = Math.floor(totalSec / 3600);
-  const m = Math.floor((totalSec % 3600) / 60);
-  const s = totalSec % 60;
-  if(h > 0) return h + "h " + m + "m " + s + "s";
-  return m + "m " + s + "s";
-}
-
-function escapeHtml(str){
-  return String(str)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;");
-}
-
-/* =========================================================
-   5. VIEW ROUTER
-   ========================================================= */
-const VIEWS = ["dashboard","practice","review","results","notes"];
-let mode = "practice";     // "practice" | "review"
-let reviewList = [];
-let reviewIdx = 0;
-
-function setView(name){
-  VIEWS.forEach(v=>{
-    document.getElementById("view-" + v).classList.toggle("active", v === name);
-  });
-  document.querySelectorAll("#nav button[data-view]").forEach(b=>{
-    b.classList.toggle("active", b.dataset.view === name);
-  });
-  if(name === "dashboard") renderDashboard();
-  if(name === "practice") renderPractice();
-  if(name === "review") renderReviewList();
-  if(name === "results") renderResults();
-  if(name === "notes") renderNotes();
-  window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
-}
-
-document.getElementById("nav").addEventListener("click", e=>{
-  const btn = e.target.closest("button[data-view]");
-  if(!btn) return;
-  const view = btn.dataset.view;
-  if(view === "practice"){ mode = "practice"; }
-  if(view === "review"){ mode = "practice"; }
-  setView(view);
-});
-
-/* =========================================================
-   6. DASHBOARD
-   ========================================================= */
-function computeStats(){
-  const ids = Object.keys(store.answers);
-  let correct = 0, incorrect = 0;
-  ids.forEach(id=>{
-    if(store.answers[id].correct) correct++;
-    else incorrect++;
-  });
-  const answered = ids.length;
-  return {
-    answered,
-    correct,
-    incorrect,
-    remaining: 100 - answered,
-    accuracy: answered ? Math.round(correct / answered * 100) : 0,
-    progress: Math.round(answered / 100 * 100)
-  };
-}
-
-function renderDashboard(){
-  const s = computeStats();
-  const grid = document.getElementById("statsGrid");
-  grid.innerHTML = [
-    ["Total questions", 100, ""],
-    ["Completed", s.answered, ""],
-    ["Correct answers", s.correct, "good"],
-    ["Incorrect answers", s.incorrect, "bad"],
-    ["Accuracy", s.accuracy + "%", ""],
-    ["Current progress", s.progress + "%", ""]
-  ].map(([lbl, num, cls])=>
-    '<div class="stat ' + cls + '"><div class="num">' + num + '</div><div class="lbl">' + lbl + '</div></div>'
-  ).join("");
-
-  document.getElementById("dashBar").style.width = s.progress + "%";
-  document.getElementById("dashProgressText").textContent =
-    s.answered + " / 100 câu đã hoàn thành · Còn lại " + s.remaining + " câu";
-}
-
-/* =========================================================
-   7. PRACTICE ENGINE
-   ========================================================= */
-function curList(){ return mode === "review" ? reviewList : store.order; }
-function getIdx(){ return mode === "review" ? reviewIdx : store.index; }
-function setIdx(v){
-  if(mode === "review"){ reviewIdx = v; }
-  else { store.index = v; saveStore(); }
-}
-function getRec(id){
-  return mode === "review" ? store.reviewAnswers[id] : store.answers[id];
-}
-function setRec(id, rec){
-  if(mode === "review"){ store.reviewAnswers[id] = rec; }
-  else { store.answers[id] = rec; }
-  saveStore();
-}
-
-let selectedOption = null;
-
-function renderPractice(){
-  const list = curList();
-  if(!list.length){ setView("dashboard"); return; }
-
-  let idx = getIdx();
-  if(idx < 0) idx = 0;
-  if(idx > list.length - 1) idx = list.length - 1;
-  setIdx(idx);
-
-  const qid = list[idx];
-  const q = QMAP[qid];
-  const rec = getRec(qid);
-
-  document.getElementById("partLabel").textContent =
-    mode === "review" ? "REVIEW MODE" : PARTS[q.part].short;
-  document.getElementById("qCounter").textContent =
-    "Câu " + (idx + 1) + " / " + list.length + "  ·  (Q" + qid + ")";
-
-  const answeredCount = Object.keys(store.answers).length;
-  document.getElementById("practiceBar").style.width =
-    (mode === "review" ? ((idx + 1) / list.length * 100) : (answeredCount / 100 * 100)) + "%";
-
-  /* ---- question body ---- */
-  const area = document.getElementById("questionArea");
-  let html = "";
-
-  if(q.type === "mcq"){
-    html += '<div class="qtext">' + escapeHtml(q.q) + '</div>';
-    html += '<div class="options" id="optionsBox">';
-    q.opts.forEach((opt, i)=>{
-      html += '<button class="opt" data-i="' + i + '">' +
-                '<span class="key">' + "ABCD"[i] + '</span>' +
-                '<span>' + escapeHtml(opt) + '</span>' +
-              '</button>';
-    });
-    html += '</div>';
-  } else if(q.type === "fill"){
-    html += '<div class="qtext">' + escapeHtml(q.q) + '</div>';
-    html += '<input id="answerInput" class="answer-input" type="text" ' +
-            'placeholder="Nhập giới từ còn thiếu..." autocomplete="off" autocapitalize="off" spellcheck="false">';
-    html += '<p class="hint">Chấp nhận chữ hoa/thường và khoảng trắng thừa. Câu có 2 chỗ trống: nhập cả hai, ví dụ “from to”.</p>';
-  } else {
-    html += '<div class="qtext"><span class="tag">Sửa lỗi</span>' + escapeHtml(q.q) + '</div>';
-    html += '<p class="hint">Câu trên có MỘT lỗi về giới từ. Hãy nhập giới từ ĐÚNG để sửa câu.</p>';
-    html += '<input id="answerInput" class="answer-input" type="text" ' +
-            'placeholder="Giới từ đúng..." autocomplete="off" autocapitalize="off" spellcheck="false">';
-  }
-  area.innerHTML = html;
-
-  /* ---- restore answered state ---- */
-  selectedOption = null;
-  const fb = document.getElementById("feedback");
-  fb.className = "feedback";
-  fb.innerHTML = "";
-
-  const submitBtn = document.getElementById("submitBtn");
-  submitBtn.disabled = false;
-  submitBtn.textContent = "Submit";
-
-  if(rec){
-    if(q.type === "mcq"){
-      selectedOption = Number(rec.value);
-      paintOptions(q, selectedOption, rec.correct, true);
-    } else {
-      const inp = document.getElementById("answerInput");
-      if(inp){
-        inp.value = rec.value || "";
-        inp.disabled = true;
-        inp.classList.add(rec.correct ? "correct" : "wrong");
-      }
-    }
-    showFeedback(q, rec.correct, rec.value);
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Đã trả lời";
-  } else {
-    if(q.type === "mcq"){
-      document.querySelectorAll("#optionsBox .opt").forEach(btn=>{
-        btn.addEventListener("click", ()=>{
-          if(submitBtn.disabled) return;
-          document.querySelectorAll("#optionsBox .opt").forEach(b=>b.classList.remove("selected"));
-          btn.classList.add("selected");
-          selectedOption = Number(btn.dataset.i);
-        });
-      });
-    } else {
-      const inp = document.getElementById("answerInput");
-      if(inp){
-        inp.addEventListener("keydown", ev=>{
-          if(ev.key === "Enter"){ ev.preventDefault(); doSubmit(); }
-        });
-      }
-    }
-  }
-
-  /* ---- flag button ---- */
-  const flagBtn = document.getElementById("flagBtn");
-  const flagged = store.flags.indexOf(qid) !== -1;
-  flagBtn.textContent = flagged ? "★ Bỏ đánh dấu" : "☆ Đánh dấu";
-
-  /* ---- prev / next ---- */
-  document.getElementById("prevBtn").disabled = idx === 0;
-  const nextBtn = document.getElementById("nextBtn");
-  if(idx === list.length - 1){
-    nextBtn.textContent = mode === "review" ? "Hoàn tất ôn tập ✓" : "Xem kết quả →";
-  } else {
-    nextBtn.textContent = "Next →";
-  }
-
-  renderChips();
-}
-
-function paintOptions(q, selected, correct, lock){
-  const opts = document.querySelectorAll("#optionsBox .opt");
-  opts.forEach((btn, i)=>{
-    btn.classList.remove("selected","correct","wrong");
-    if(i === q.ans) btn.classList.add("correct");
-    if(i === selected && !correct) btn.classList.add("wrong");
-    if(i === selected && correct) btn.classList.add("correct");
-    if(lock) btn.disabled = true;
-  });
-  if(lock) opts.forEach(b=>b.disabled = true);
-}
-
-function showFeedback(q, correct, userValue){
-  const fb = document.getElementById("feedback");
-  const correctText = displayAnswer(q);
-
-  let html = "";
-  if(correct){
-    html += '<div class="fb-title">✓ Chính xác!</div>';
-    html += '<div class="fb-row"><b>Đáp án đúng:</b> <span class="ans-pill">' + escapeHtml(correctText) + '</span></div>';
-  } else {
-    html += '<div class="fb-title">✗ Chưa đúng</div>';
-    if(q.type === "mcq"){
-      html += '<div class="fb-row"><b>Bạn chọn:</b> <span style="color:var(--red);font-weight:700">' +
-              escapeHtml(userAnswerText(q, userValue)) + '</span></div>';
-    } else {
-      html += '<div class="fb-row"><b>Bạn nhập:</b> <span style="color:var(--red);font-weight:700">' +
-              escapeHtml(userAnswerText(q, userValue)) + '</span></div>';
-    }
-    html += '<div class="fb-row"><b>Đáp án đúng:</b> <span class="ans-pill">' + escapeHtml(correctText) + '</span></div>';
-  }
-
-  if(q.type === "error" && q.fixed){
-    html += '<div class="fb-row" style="margin-top:8px"><b>Câu hoàn chỉnh:</b> ' + escapeHtml(q.fixed) + '</div>';
-  }
-
-  html += '<div class="fb-row" style="margin-top:8px"><b>Giải thích:</b> ' + escapeHtml(q.exp) + '</div>';
-
-  if(q.con){
-    html += '<div class="contrast"><b>Phân biệt:</b> ' + escapeHtml(q.con) + '</div>';
-  }
-
-  fb.className = "feedback show " + (correct ? "ok" : "no");
-  fb.innerHTML = html;
-}
-
-function doSubmit(){
-  const list = curList();
-  const qid = list[getIdx()];
-  const q = QMAP[qid];
-  if(getRec(qid)) return;   // đã trả lời
-
-  let value;
-  if(q.type === "mcq"){
-    if(selectedOption === null){
-      const fb = document.getElementById("feedback");
-      fb.className = "feedback show no";
-      fb.innerHTML = '<div class="fb-title">⚠ Chưa chọn đáp án</div><div class="fb-row">Vui lòng chọn một trong bốn lựa chọn A, B, C hoặc D.</div>';
-      return;
-    }
-    value = selectedOption;
-  } else {
-    const inp = document.getElementById("answerInput");
-    value = (inp ? inp.value : "").trim();
-    if(!normalize(value)){
-      const fb = document.getElementById("feedback");
-      fb.className = "feedback show no";
-      fb.innerHTML = '<div class="fb-title">⚠ Chưa nhập đáp án</div><div class="fb-row">Vui lòng nhập giới từ vào ô trả lời.</div>';
-      return;
-    }
-  }
-
-  const correct = isCorrect(q, value);
-  setRec(qid, {value: value, correct: correct});
-
-  /* cập nhật thời gian hoàn thành */
-  if(mode === "practice"){
-    if(Object.keys(store.answers).length === 100 && !store.endTime){
-      store.endTime = Date.now();
-    }
-    saveStore();
-  }
-
-  /* vẽ lại trạng thái */
-  if(q.type === "mcq"){
-    paintOptions(q, value, correct, true);
-  } else {
-    const inp = document.getElementById("answerInput");
-    if(inp){
-      inp.disabled = true;
-      inp.classList.add(correct ? "correct" : "wrong");
-    }
-  }
-
-  showFeedback(q, correct, value);
-
-  const submitBtn = document.getElementById("submitBtn");
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Đã trả lời";
-
-  /* review mode: đánh dấu đã khắc phục */
-  if(mode === "review" && correct){
-    store.reviewAnswers[qid] = {value: value, correct: true, fixed: true};
-    saveStore();
-  }
-
-  if(mode === "practice"){
-    const answeredCount = Object.keys(store.answers).length;
-    document.getElementById("practiceBar").style.width = (answeredCount / 100 * 100) + "%";
-  }
-  renderChips();
-}
-
-/* ---- điều hướng ---- */
-document.getElementById("submitBtn").addEventListener("click", doSubmit);
-
-document.getElementById("prevBtn").addEventListener("click", ()=>{
-  const idx = getIdx();
-  if(idx > 0){ setIdx(idx - 1); renderPractice(); }
-});
-
-document.getElementById("nextBtn").addEventListener("click", ()=>{
-  const list = curList();
-  const idx = getIdx();
-  if(idx < list.length - 1){
-    setIdx(idx + 1);
-    renderPractice();
-  } else {
-    if(mode === "review"){
-      alert("Đã hoàn tất phần ôn tập câu sai!");
-      setView("review");
-    } else {
-      if(!store.endTime) { store.endTime = Date.now(); saveStore(); }
-      setView("results");
-    }
-  }
-});
-
-document.getElementById("flagBtn").addEventListener("click", ()=>{
-  const qid = curList()[getIdx()];
-  const pos = store.flags.indexOf(qid);
-  if(pos === -1) store.flags.push(qid);
-  else store.flags.splice(pos, 1);
-  saveStore();
-  renderPractice();
-});
-
-/* ---- chips ---- */
-function renderChips(){
-  const partChips = document.getElementById("partChips");
-  const list = curList();
-  let html = "";
-  Object.keys(PARTS).forEach(p=>{
-    const pnum = Number(p);
-    const total = QUESTIONS.filter(q => q.part === pnum).length;
-    let done = 0;
-    QUESTIONS.filter(q => q.part === pnum).forEach(q=>{
-      const rec = mode === "review" ? store.reviewAnswers[q.id] : store.answers[q.id];
-      if(rec) done++;
-    });
-    html += '<button class="chip" data-part="' + pnum + '">' +
-            PARTS[pnum].short.split("·")[0].trim() + " · " + done + "/" + total +
-            '</button>';
-  });
-  partChips.innerHTML = html;
-
-  partChips.querySelectorAll(".chip").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      const pnum = Number(btn.dataset.part);
-      const i = list.findIndex(id => QMAP[id].part === pnum);
-      if(i === -1){
-        alert("Phần này không có câu nào trong danh sách hiện tại.");
-        return;
-      }
-      setIdx(i);
-      renderPractice();
-    });
-  });
-
-  const flagChips = document.getElementById("flagChips");
-  if(store.flags.length === 0){
-    flagChips.innerHTML = '<span class="small-note" style="text-align:left">Chưa có câu nào được đánh dấu.</span>';
-  } else {
-    flagChips.innerHTML = store.flags
-      .slice()
-      .sort((a,b)=>a-b)
-      .map(id=>{
-        const i = list.indexOf(id);
-        const cls = "chip flagged" + (i === getIdx() ? " current" : "");
-        return '<button class="' + cls + '" data-id="' + id + '">Q' + id + '</button>';
-      }).join("");
-
-    flagChips.querySelectorAll(".chip").forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        const id = Number(btn.dataset.id);
-        const i = list.indexOf(id);
-        if(i === -1){
-          alert("Câu Q" + id + " không nằm trong danh sách hiện tại. Hãy quay lại chế độ Practice.");
-          return;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepositions of Time – 100 Exercises (A1–B2)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            blue: '#DCEEFF',
+                            light: '#EFF7FF',
+                            navy: '#24476B',
+                            dark: '#1A334E',
+                            accent: '#3B82F6',
+                            success: '#10B981',
+                            error: '#EF4444',
+                            card: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
         }
-        setIdx(i);
-        renderPractice();
-      });
-    });
-  }
-}
-
-/* =========================================================
-   8. REVIEW MISTAKES
-   ========================================================= */
-function getWrongIds(){
-  return Object.keys(store.answers)
-    .filter(id => store.answers[id].correct === false)
-    .map(Number)
-    .sort((a,b)=>a-b);
-}
-
-function renderReviewList(){
-  const wrong = getWrongIds();
-  const box = document.getElementById("reviewList");
-  if(wrong.length === 0){
-    box.innerHTML = '<div class="empty-state">🎉 Tuyệt vời! Bạn chưa có câu nào trả lời sai (hoặc chưa làm bài).</div>';
-    return;
-  }
-  box.innerHTML = wrong.map(id=>{
-    const q = QMAP[id];
-    const rec = store.answers[id];
-    const rv = store.reviewAnswers[id];
-    const fixedTag = (rv && rv.correct) ? ' <span style="color:var(--green);font-weight:800">✔ đã khắc phục</span>' : '';
-    return '<div class="wrong-item">' +
-      '<div class="wq">Q' + id + ' · ' + escapeHtml(q.q) + fixedTag + '</div>' +
-      '<div class="wa"><span class="bad">Bạn trả lời: ' + escapeHtml(userAnswerText(q, rec.value)) + '</span>' +
-      ' &nbsp;·&nbsp; <span class="good">Đáp án đúng: ' + escapeHtml(displayAnswer(q)) + '</span></div>' +
-      '<div class="wexp"><b>Giải thích:</b> ' + escapeHtml(q.exp) +
-        (q.con ? '<br><b>Phân biệt:</b> ' + escapeHtml(q.con) : '') +
-      '</div>' +
-    '</div>';
-  }).join("");
-}
-
-document.getElementById("startReviewBtn").addEventListener("click", ()=>{
-  const wrong = getWrongIds();
-  if(wrong.length === 0){
-    alert("Bạn chưa có câu sai nào để ôn tập. Hãy làm bài trước nhé!");
-    return;
-  }
-  mode = "review";
-  reviewList = wrong;
-  reviewIdx = 0;
-  setView("practice");
-});
-
-document.getElementById("clearReviewBtn").addEventListener("click", ()=>{
-  if(!confirm("Xoá lịch sử ôn tập câu sai (các dấu ✔ đã khắc phục)?")) return;
-  store.reviewAnswers = {};
-  saveStore();
-  renderReviewList();
-});
-
-/* =========================================================
-   9. RESULTS
-   ========================================================= */
-function renderResults(){
-  const s = computeStats();
-  const area = document.getElementById("resultsArea");
-
-  if(s.answered === 0){
-    area.innerHTML = '<div class="empty-state">Bạn chưa trả lời câu nào. Hãy bắt đầu luyện tập!</div>';
-    return;
-  }
-
-  let rating, ratingCls;
-  if(s.correct >= 90){ rating = "Excellent 🏆"; }
-  else if(s.correct >= 80){ rating = "Very Good 🌟"; }
-  else if(s.correct >= 70){ rating = "Good 👍"; }
-  else if(s.correct >= 60){ rating = "Fair 🙂"; }
-  else { rating = "Needs Improvement 💪"; }
-
-  const duration = (store.startTime && store.endTime)
-      ? formatDuration(store.endTime - store.startTime)
-      : (store.startTime ? formatDuration(Date.now() - store.startTime) + " (đang tính)" : "—");
-
-  /* per-section */
-  let sectionHtml = "";
-  Object.keys(PARTS).forEach(p=>{
-    const pnum = Number(p);
-    const qs = QUESTIONS.filter(q => q.part === pnum);
-    let done = 0, correct = 0;
-    qs.forEach(q=>{
-      const rec = store.answers[q.id];
-      if(rec){ done++; if(rec.correct) correct++; }
-    });
-    const pct = done ? Math.round(correct / done * 100) : 0;
-    sectionHtml +=
-      '<div class="section-row">' +
-        '<div class="sr-head"><span>' + escapeHtml(PARTS[pnum].name) + '</span>' +
-          '<span>' + correct + '/' + done + ' · ' + pct + '%</span></div>' +
-        '<div class="bar small"><div style="width:' + pct + '%"></div></div>' +
-      '</div>';
-  });
-
-  /* weakest topic */
-  const topicStats = {};
-  TOPIC_LIST.forEach(t => topicStats[t] = {total:0, correct:0});
-  Object.keys(store.answers).forEach(id=>{
-    const q = QMAP[id];
-    const rec = store.answers[id];
-    if(!q || !topicStats[q.topic]) return;
-    topicStats[q.topic].total++;
-    if(rec.correct) topicStats[q.topic].correct++;
-  });
-  let weakest = null, weakestPct = 101;
-  Object.keys(topicStats).forEach(t=>{
-    const st = topicStats[t];
-    if(st.total === 0) return;
-    const pct = st.correct / st.total * 100;
-    if(pct < weakestPct){ weakestPct = pct; weakest = t; }
-  });
-
-  /* wrong list */
-  const wrong = getWrongIds();
-  let wrongHtml = "";
-  if(wrong.length === 0){
-    wrongHtml = '<div class="empty-state">Không có câu sai. Hoàn hảo! 🎉</div>';
-  } else {
-    wrongHtml = wrong.map(id=>{
-      const q = QMAP[id];
-      const rec = store.answers[id];
-      return '<div class="wrong-item">' +
-        '<div class="wq">Q' + id + ' · ' + escapeHtml(q.q) + '</div>' +
-        '<div class="wa"><span class="bad">Bạn trả lời: ' + escapeHtml(userAnswerText(q, rec.value)) + '</span>' +
-        ' &nbsp;·&nbsp; <span class="good">Đáp án đúng: ' + escapeHtml(displayAnswer(q)) + '</span></div>' +
-        '<div class="wexp"><b>Giải thích:</b> ' + escapeHtml(q.exp) +
-          (q.con ? '<br><b>Phân biệt:</b> ' + escapeHtml(q.con) : '') +
-        '</div>' +
-      '</div>';
-    }).join("");
-  }
-
-  area.innerHTML =
-    '<div class="score-big">' + s.correct + ' / 100</div>' +
-    '<div class="score-sub">' + s.answered + ' câu đã làm · Độ chính xác ' + s.accuracy + '%</div>' +
-    '<div class="rating">' + rating + '</div>' +
-
-    '<div class="grid" style="margin-bottom:16px">' +
-      '<div class="stat good"><div class="num">' + s.correct + '</div><div class="lbl">Correct</div></div>' +
-      '<div class="stat bad"><div class="num">' + s.incorrect + '</div><div class="lbl">Incorrect</div></div>' +
-      '<div class="stat"><div class="num">' + s.accuracy + '%</div><div class="lbl">Accuracy</div></div>' +
-      '<div class="stat"><div class="num">' + duration + '</div><div class="lbl">Completion time</div></div>' +
-    '</div>' +
-
-    '<h4 style="margin-top:6px">Performance by section</h4>' + sectionHtml +
-
-    '<h4 style="margin-top:6px">Weakest grammar topic</h4>' +
-    '<p>' + (weakest
-        ? '<b>' + escapeHtml(weakest) + '</b> – ' + Math.round(weakestPct) + '% chính xác. Hãy đọc lại Grammar Notes cho chủ điểm này.'
-        : 'Chưa đủ dữ liệu.') + '</p>' +
-
-    '<h4 style="margin-top:16px">List of incorrect questions (' + wrong.length + ')</h4>' + wrongHtml +
-
-    '<div class="actions" style="margin-top:20px">' +
-      '<button class="btn primary" id="resReviewBtn">🔁 Ôn lại câu sai</button>' +
-      '<button class="btn" id="resPracticeBtn">⏩ Tiếp tục làm bài</button>' +
-    '</div>';
-
-  const rb = document.getElementById("resReviewBtn");
-  if(rb) rb.addEventListener("click", ()=>{
-    if(getWrongIds().length === 0){ alert("Không có câu sai nào để ôn tập."); return; }
-    mode = "review";
-    reviewList = getWrongIds();
-    reviewIdx = 0;
-    setView("practice");
-  });
-  const pb = document.getElementById("resPracticeBtn");
-  if(pb) pb.addEventListener("click", ()=>{ mode = "practice"; setView("practice"); });
-}
-
-/* =========================================================
-   10. GRAMMAR NOTES
-   ========================================================= */
-const NOTES = [
-{
- title:"1. AT – IN – ON",
- body:`
- <h4>Definition</h4>
- <p>Ba giới từ cơ bản nhất chỉ thời gian, phân biệt theo <b>độ dài / tính cụ thể</b> của mốc thời gian. <span class="vi">(Ba giới từ này chia thời gian theo mức độ cụ thể: giờ → ngày → khoảng dài.)</span></p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>AT</code> + giờ / mốc thời điểm cụ thể: <i>at 7 o'clock, at noon, at midnight, at night, at dawn, at lunchtime, at the weekend (BrE), at Christmas, at the age of 20, at the moment.</i></li>
-   <li><code>IN</code> + tháng, năm, mùa, thập kỷ, buổi (trừ night), khoảng thời gian tương lai: <i>in May, in 2024, in summer, in the 1990s, in the morning, in two weeks.</i></li>
-   <li><code>ON</code> + ngày, thứ, ngày tháng, ngày lễ có "Day": <i>on Monday, on 5 May, on Monday morning, on Christmas Day, on my birthday.</i></li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>AT + time point</code></li>
-   <li><code>IN + longer period</code> (month / year / season / part of day)</li>
-   <li><code>ON + day / date</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">My class starts <b>at</b> 7:00 a.m. <span class="vi">— Lớp học bắt đầu lúc 7 giờ sáng.</span></div>
- <div class="ex">My birthday is <b>in</b> November. <span class="vi">— Sinh nhật tôi vào tháng 11.</span></div>
- <div class="ex">We visit our grandparents <b>on</b> Sundays. <span class="vi">— Chúng tôi thăm ông bà vào các ngày Chủ nhật.</span></div>
- <div class="ex">The festival takes place <b>on</b> 15th December. <span class="vi">— Lễ hội diễn ra vào ngày 15 tháng 12.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ in 7 a.m. → ✓ <b>at</b> 7 a.m.<br>
- ✗ on 2005 → ✓ <b>in</b> 2005<br>
- ✗ in Monday → ✓ <b>on</b> Monday<br>
- ✗ on the morning → ✓ <b>in</b> the morning</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th>Giới từ</th><th>Dùng với</th><th>Ví dụ</th></tr>
-   <tr><td>AT</td><td>giờ, mốc chính xác</td><td>at 8 p.m., at noon, at night</td></tr>
-   <tr><td>IN</td><td>khoảng dài</td><td>in July, in 2024, in winter</td></tr>
-   <tr><td>ON</td><td>ngày, thứ</td><td>on Friday, on 2 May</td></tr>
- </table>
- <p><b>Lưu ý:</b> <i>at night</i> nhưng <i>in the morning / afternoon / evening</i>. Người Anh nói <i>at the weekend</i>, người Mỹ nói <i>on the weekend</i>.</p>
- `
-},
-{
- title:"2. FOR – SINCE – DURING",
- body:`
- <h4>Definition</h4>
- <p><span class="vi">Ba giới từ chỉ thời lượng / mốc bắt đầu / thời điểm diễn ra.</span></p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>FOR</code> + <b>khoảng thời gian</b> (trả lời "How long?"): <i>for three years, for two hours, for a long time.</i></li>
-   <li><code>SINCE</code> + <b>mốc bắt đầu</b> (trả lời "Since when?"): <i>since 2020, since Monday, since he left.</i></li>
-   <li><code>DURING</code> + <b>danh từ</b> chỉ sự kiện/khoảng thời gian: <i>during the exam, during the summer, during the meeting.</i></li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>FOR + period of time</code></li>
-   <li><code>SINCE + point in time / clause</code></li>
-   <li><code>DURING + noun (phrase)</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">I have studied English <b>for</b> three years. <span class="vi">— Tôi học tiếng Anh được 3 năm (độ dài).</span></div>
- <div class="ex">She has worked here <b>since</b> 2022. <span class="vi">— Cô ấy làm ở đây từ năm 2022 (mốc bắt đầu).</span></div>
- <div class="ex">Nobody may use phones <b>during</b> the examination. <span class="vi">— Không ai được dùng điện thoại trong lúc thi.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ for 2020 → ✓ <b>since</b> 2020<br>
- ✗ since three years → ✓ <b>for</b> three years<br>
- ✗ during three years → ✓ <b>for</b> three years<br>
- ✗ during the meeting ended → ✓ <b>after/when</b> the meeting ended (DURING không đi với mệnh đề)</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th></th><th>FOR</th><th>SINCE</th><th>DURING</th></tr>
-   <tr><td>+ </td><td>khoảng thời gian</td><td>mốc thời gian</td><td>danh từ (sự kiện)</td></tr>
-   <tr><td>Ví dụ</td><td>for 2 hours</td><td>since 8 a.m.</td><td>during the lesson</td></tr>
-   <tr><td>Thì</td><td>mọi thì</td><td>thường HTHT</td><td>mọi thì</td></tr>
- </table>
- <p><b>Mẹo:</b> Nếu trả lời được cho câu hỏi <i>"How long?"</i> → FOR. Nếu trả lời <i>"Since when?"</i> → SINCE.</p>
- `
-},
-{
- title:"3. BY – UNTIL – TILL",
- body:`
- <h4>Definition</h4>
- <p><code>BY</code> = <b>hạn chót</b> (không muộn hơn). <code>UNTIL / TILL</code> = <b>kéo dài đến</b> một mốc. <span class="vi">(BY là điểm đến hạn, UNTIL là điểm dừng của một hành động kéo dài.)</span></p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>BY</code> + mốc thời gian: <i>by Friday, by 6 p.m., by the end of the day.</i></li>
-   <li><code>UNTIL / TILL</code> + mốc thời gian: <i>until 10 p.m., until you come back, until further notice.</i></li>
-   <li><code>TILL</code> là dạng thân mật của <code>UNTIL</code>, nghĩa hoàn toàn giống nhau.</li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>BY + deadline</code> → hành động hoàn thành trước mốc đó</li>
-   <li><code>UNTIL + end point</code> → hành động tiếp diễn đến mốc đó</li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">You must submit your assignment <b>by</b> Friday. <span class="vi">— Nộp bài trước thứ Sáu (hạn chót).</span></div>
- <div class="ex">I will wait here <b>until</b> you come back. <span class="vi">— Tôi sẽ đợi đến khi bạn quay lại (kéo dài).</span></div>
- <div class="ex">The shop is open <b>until</b> 9 p.m. <span class="vi">— Cửa hàng mở đến 9 giờ tối.</span></div>
- <div class="ex">Please finish it <b>by</b> 9 p.m. <span class="vi">— Làm xong trước 9 giờ tối.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ Finish it <b>until</b> Friday. (nghĩa hạn chót) → ✓ <b>by</b> Friday<br>
- ✗ I will stay <b>by</b> you return. → ✓ <b>until</b> you return<br>
- ✗ The shop closes <b>until</b> 9 p.m. → ✓ closes <b>at</b> 9 p.m.</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th></th><th>BY</th><th>UNTIL / TILL</th></tr>
-   <tr><td>Nghĩa</td><td>trước / không muộn hơn</td><td>cho đến khi</td></tr>
-   <tr><td>Loại động từ</td><td>hoàn thành (finish, submit, return)</td><td>tiếp diễn (wait, stay, work, be open)</td></tr>
-   <tr><td>Ví dụ</td><td>by 6 p.m.</td><td>until 6 p.m.</td></tr>
- </table>
- `
-},
-{
- title:"4. BEFORE – AFTER",
- body:`
- <h4>Definition</h4>
- <p><code>BEFORE</code> = trước khi; <code>AFTER</code> = sau khi. <span class="vi">Cả hai đều đứng trước danh từ, V-ing hoặc một mệnh đề.</span></p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>BEFORE + noun / V-ing / clause</code>: <i>before dinner, before going to bed, before you leave.</i></li>
-   <li><code>AFTER + noun / V-ing / clause</code>: <i>after dinner, after finishing work, after the meeting ended.</i></li>
-   <li>Trạng từ tương ứng: <i>afterwards, later, then</i> (đứng một mình, không cần tân ngữ).</li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>before / after + N</code></li>
-   <li><code>before / after + V-ing</code></li>
-   <li><code>before / after + S + V</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">Wash your hands <b>before</b> eating. <span class="vi">— Rửa tay trước khi ăn.</span></div>
- <div class="ex">We went for a walk <b>after</b> dinner. <span class="vi">— Chúng tôi đi dạo sau bữa tối.</span></div>
- <div class="ex">He left <b>after</b> the meeting ended. <span class="vi">— Anh ấy rời đi sau khi cuộc họp kết thúc.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ after go to bed → ✓ after <b>going</b> to bed<br>
- ✗ during the meeting ended → ✓ <b>after</b> the meeting ended</div>
-
- <h4>Comparison</h4>
- <p><b>before vs after:</b> ngược nghĩa nhau, cùng cấu trúc. <b>after vs afterwards:</b> "after" cần tân ngữ, "afterwards" đứng độc lập.</p>
- <div class="ex">We had dinner <b>after</b> the film. = We watched the film and had dinner <b>afterwards</b>.</div>
- `
-},
-{
- title:"5. FROM – TO – BETWEEN – AND",
- body:`
- <h4>Definition</h4>
- <p><code>FROM … TO …</code> = từ … đến … (liên tục). <code>BETWEEN … AND …</code> = giữa … và … (khoảng, không liên tục).</p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>from</code> + mốc bắt đầu, <code>to</code> + mốc kết thúc: <i>from Monday to Friday, from 9 to 5.</i></li>
-   <li><code>between</code> + mốc A, <code>and</code> + mốc B: <i>between 9 and 10, between classes.</i></li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>FROM + A + TO + B</code></li>
-   <li><code>BETWEEN + A + AND + B</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">The library is open <b>from</b> Monday <b>to</b> Saturday. <span class="vi">— Thư viện mở từ thứ Hai đến thứ Bảy.</span></div>
- <div class="ex">The course runs <b>from</b> January <b>to</b> March. <span class="vi">— Khoá học chạy từ tháng 1 đến tháng 3.</span></div>
- <div class="ex">We have a short break <b>between</b> classes. <span class="vi">— Chúng tôi có giờ nghỉ ngắn giữa các tiết.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ between Monday <b>to</b> Friday → ✓ between Monday <b>and</b> Friday<br>
- ✗ from Monday <b>and</b> Friday → ✓ from Monday <b>to</b> Friday</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th></th><th>FROM … TO …</th><th>BETWEEN … AND …</th></tr>
-   <tr><td>Nghĩa</td><td>từ … đến … (liên tục)</td><td>giữa … và … (khoảng)</td></tr>
-   <tr><td>Ví dụ</td><td>from 9 to 5</td><td>between 9 and 10</td></tr>
- </table>
- <p><b>Lưu ý:</b> <i>from … until/till …</i> cũng đúng nhưng nhấn mạnh sự kéo dài hơn.</p>
- `
-},
-{
- title:"6. WITHIN – THROUGHOUT – OVER",
- body:`
- <h4>Definition</h4>
- <p><code>WITHIN</code> = trong vòng (trước khi hết hạn). <code>THROUGHOUT</code> = suốt (toàn bộ khoảng thời gian). <code>OVER</code> = trong suốt / qua một khoảng thời gian.</p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>WITHIN + period</code>: <i>within two weeks, within 30 minutes.</i></li>
-   <li><code>THROUGHOUT + noun</code>: <i>throughout the year, throughout the lesson.</i></li>
-   <li><code>OVER + period</code>: <i>over the weekend, over the last few years.</i></li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>within + a period of time</code></li>
-   <li><code>throughout + the + noun</code></li>
-   <li><code>over + period</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">Finish the project <b>within</b> two weeks. <span class="vi">— Hoàn thành dự án trong vòng hai tuần.</span></div>
- <div class="ex">He slept <b>throughout</b> the film. <span class="vi">— Anh ấy ngủ suốt bộ phim.</span></div>
- <div class="ex">She improved a lot <b>over</b> the summer. <span class="vi">— Cô ấy tiến bộ nhiều trong suốt mùa hè.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ finish it within the deadline? (được, nhưng tự nhiên hơn: <b>by</b> the deadline)<br>
- ✗ throughout two weeks → ✓ <b>for</b> two weeks / <b>throughout</b> the two weeks</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th>Giới từ</th><th>Nghĩa</th><th>Ví dụ</th></tr>
-   <tr><td>WITHIN</td><td>trong vòng (trước hạn)</td><td>within 3 days</td></tr>
-   <tr><td>THROUGHOUT</td><td>suốt (100% thời gian)</td><td>throughout the year</td></tr>
-   <tr><td>OVER</td><td>qua / trong suốt</td><td>over the weekend</td></tr>
- </table>
- `
-},
-{
- title:"7. AGO – IN – LATER",
- body:`
- <h4>Definition</h4>
- <p>Ba cách diễn đạt vị trí thời gian so với hiện tại: <code>AGO</code> (quá khứ), <code>IN</code> (tương lai), <code>LATER</code> (sau đó).</p>
-
- <h4>Usage</h4>
- <ul>
-   <li><code>... + AGO</code>: đứng sau khoảng thời gian, dùng với <b>thì quá khứ đơn</b>: <i>three years ago, two days ago.</i></li>
-   <li><code>IN + period</code>: tương lai, tính từ hiện tại: <i>in three days, in a few minutes.</i></li>
-   <li><code>... + LATER</code>: sau đó (trong quá khứ hoặc tương lai, thường dùng kể chuyện): <i>three years later, later that day.</i></li>
- </ul>
-
- <h4>Structure</h4>
- <ul>
-   <li><code>period + ago</code> (quá khứ)</li>
-   <li><code>in + period</code> (tương lai)</li>
-   <li><code>period + later</code> / <code>later, ...</code></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">My brother graduated three years <b>ago</b>. <span class="vi">— Anh tôi tốt nghiệp cách đây ba năm.</span></div>
- <div class="ex">She will return <b>in</b> a few minutes. <span class="vi">— Cô ấy sẽ quay lại trong vài phút nữa.</span></div>
- <div class="ex">He moved to Hanoi and, two years <b>later</b>, opened a shop. <span class="vi">— Anh ấy chuyển ra Hà Nội, hai năm sau mở một cửa hàng.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ I met him three years <b>before</b>. (đứng một mình) → ✓ three years <b>ago</b><br>
- ✗ I will go there three days <b>ago</b>. → ✓ <b>in</b> three days</div>
-
- <h4>Comparison</h4>
- <table>
-   <tr><th></th><th>AGO</th><th>IN</th><th>LATER</th></tr>
-   <tr><td>Hướng</td><td>quá khứ</td><td>tương lai</td><td>sau đó</td></tr>
-   <tr><td>Ví dụ</td><td>2 days ago</td><td>in 2 days</td><td>2 days later</td></tr>
- </table>
- `
-},
-{
- title:"8. ZERO PREPOSITIONS (Không dùng giới từ)",
- body:`
- <h4>Definition</h4>
- <p>Một số từ/cụm chỉ thời gian <b>không đi với giới từ</b>. <span class="vi">Đây là lỗi rất phổ biến của người học.</span></p>
-
- <h4>Usage – Không dùng giới từ trước:</h4>
- <ul>
-   <li><code>next</code> + time: <i>next Friday, next week, next month, next year</i></li>
-   <li><code>last</code> + time: <i>last night, last week, last Monday</i></li>
-   <li><code>this</code> + time: <i>this morning, this week, this year</i></li>
-   <li><code>every / each</code> + time: <i>every day, every morning, each week</i></li>
-   <li><code>all</code> + time: <i>all day, all night</i></li>
-   <li>Trạng từ thời gian: <i>today, tomorrow, yesterday, tonight</i></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">I'll see you <b>next Friday</b>. <span class="vi">— (Không dùng "on next Friday")</span></div>
- <div class="ex">I saw him <b>last week</b>. <span class="vi">— (Không dùng "in last week")</span></div>
- <div class="ex">She goes to the gym <b>every morning</b>. <span class="vi">— (Không dùng "on every morning")</span></div>
- <div class="ex">We will meet <b>tomorrow</b>. <span class="vi">— (Không dùng "on tomorrow")</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ on next Friday → ✓ next Friday<br>
- ✗ in last week → ✓ last week<br>
- ✗ at this morning → ✓ this morning</div>
-
- <h4>Comparison</h4>
- <p>So sánh: <i>on Monday</i> (có giới từ) nhưng <i>next Monday</i> (không giới từ). Khi đã có <b>next / last / this / every</b> thì bỏ giới từ.</p>
- `
-},
-{
- title:"9. FIXED EXPRESSIONS (Cụm cố định)",
- body:`
- <h4>Definition</h4>
- <p>Nhiều cụm thời gian là <b>thành ngữ cố định</b> — phải học thuộc, không suy luận theo quy tắc chung.</p>
-
- <h4>Cụm với AT</h4>
- <ul>
-   <li><i>at night, at noon, at midnight, at dawn, at dusk, at lunchtime</i></li>
-   <li><i>at the weekend (BrE), at Christmas, at Easter, at New Year</i></li>
-   <li><i>at the moment, at present, at the same time, at first, at last, at times</i></li>
-   <li><i>at the age of, at the beginning of, at the end of</i></li>
- </ul>
-
- <h4>Cụm với IN</h4>
- <ul>
-   <li><i>in the morning / afternoon / evening</i></li>
-   <li><i>in time, in the end, in the past, in the future, in the 1990s, in a few minutes</i></li>
- </ul>
-
- <h4>Cụm với ON</h4>
- <ul>
-   <li><i>on time, on Monday, on Christmas Day, on my birthday, on weekends (AmE)</i></li>
- </ul>
-
- <h4>Cụm với BY / FOR / WITHIN</h4>
- <ul>
-   <li><i>by now, by then, by the time, by chance</i></li>
-   <li><i>for ages, for a while, for the time being, for good</i></li>
-   <li><i>within reason, within minutes</i></li>
- </ul>
-
- <h4>Examples</h4>
- <div class="ex">The train arrived <b>on time</b>. <span class="vi">— Tàu đến đúng giờ.</span></div>
- <div class="ex">We arrived just <b>in time</b> to catch the bus. <span class="vi">— Chúng tôi đến vừa kịp để bắt xe buýt.</span></div>
- <div class="ex">He learned to swim <b>at the age of</b> five. <span class="vi">— Anh ấy biết bơi từ năm 5 tuổi.</span></div>
-
- <h4>Common mistakes</h4>
- <div class="warn">✗ on time = in time? → KHÔNG. <b>on time</b> = đúng giờ; <b>in time</b> = kịp lúc.<br>
- ✗ in Christmas Day → ✓ <b>on</b> Christmas Day</div>
- `
-},
-{
- title:"10. SPECIAL CASES (Trường hợp đặc biệt)",
- body:`
- <h4>1. AT night vs IN the night</h4>
- <p><i>at night</i> = vào ban đêm (chung). <i>in the night</i> = trong một đêm cụ thể (hiếm, văn học).</p>
-
- <h4>2. ON time vs IN time</h4>
- <p><i>on time</i> = đúng giờ đã định; <i>in time</i> = kịp lúc (trước khi quá muộn).</p>
-
- <h4>3. AT the end vs IN the end</h4>
- <p><i>at the end of + N</i> = vào cuối (của cái gì). <i>in the end</i> = cuối cùng, rốt cuộc (trạng từ).</p>
- <div class="ex">There will be a test <b>at the end of</b> the course. / <b>In the end</b>, we decided not to go.</div>
-
- <h4>4. Christmas & holidays</h4>
- <p><i>at Christmas / at Easter / at New Year</i> (dịp lễ chung) nhưng <i>on Christmas Day / on New Year's Day</i> (ngày cụ thể).</p>
-
- <h4>5. Weekend – Anh vs Mỹ</h4>
- <p>BrE: <i>at the weekend / at weekends</i>. AmE: <i>on the weekend / on weekends</i>.</p>
-
- <h4>6. BY vs UNTIL</h4>
- <p>BY + hạn chót (hành động hoàn thành). UNTIL + mốc kết thúc (hành động kéo dài).</p>
-
- <h4>7. SINCE vs FOR</h4>
- <p>SINCE + mốc bắt đầu. FOR + khoảng thời gian.</p>
-
- <h4>8. "In" cho tương lai</h4>
- <p><i>in + khoảng thời gian</i> = sau khoảng đó (tương lai): <i>in two hours, in a week.</i></p>
-
- <h4>9. Không dùng giới từ với next / last / this / every</h4>
- <p><i>next Friday, last week, this morning, every day.</i></p>
-
- <h4>10. ARRIVE</h4>
- <p><i>arrive <b>at</b></i> + địa điểm nhỏ (the airport, the station) · <i>arrive <b>in</b></i> + thành phố/quốc gia · <i>arrive home</i> (không giới từ).</p>
-
- <h4>Common mistakes tổng hợp</h4>
- <div class="warn">✗ on 2004 → ✓ in 2004<br>
- ✗ in Monday → ✓ on Monday<br>
- ✗ for 2020 → ✓ since 2020<br>
- ✗ until Friday (hạn chót) → ✓ by Friday<br>
- ✗ on the morning → ✓ in the morning<br>
- ✗ at midnight ✓ (đúng) – nhưng ✗ in midnight</div>
- `
-}
-];
-
-function renderNotes(){
-  const box = document.getElementById("notesArea");
-  if(box.dataset.rendered === "1") return;
-  box.innerHTML = NOTES.map((n, i)=>
-    '<details' + (i === 0 ? ' open' : '') + '>' +
-      '<summary>' + escapeHtml(n.title) + '</summary>' +
-      '<div class="note-body">' + n.body + '</div>' +
-    '</details>'
-  ).join("");
-  box.dataset.rendered = "1";
-}
-
-/* =========================================================
-   11. DASHBOARD ACTIONS
-   ========================================================= */
-document.getElementById("startBtn").addEventListener("click", ()=>{
-  const hasProgress = Object.keys(store.answers).length > 0;
-  if(hasProgress && !confirm("Bắt đầu lượt luyện tập mới?\nTiến độ hiện tại sẽ bị xoá.")) return;
-  store.answers = {};
-  store.flags = [];
-  store.order = shuffle(QUESTIONS.map(q => q.id));
-  store.index = 0;
-  store.startTime = Date.now();
-  store.endTime = null;
-  saveStore();
-  mode = "practice";
-  setView("practice");
-});
-
-document.getElementById("continueBtn").addEventListener("click", ()=>{
-  mode = "practice";
-  if(!store.order || store.order.length !== 100){
-    store.order = QUESTIONS.map(q => q.id);
-    saveStore();
-  }
-  if(!store.startTime) { store.startTime = Date.now(); saveStore(); }
-
-  // tìm câu chưa trả lời đầu tiên
-  let idx = store.order.findIndex(id => !store.answers[id]);
-  if(idx === -1) idx = 0;
-  store.index = idx;
-  saveStore();
-  setView("practice");
-});
-
-document.getElementById("reviewBtn").addEventListener("click", ()=>{
-  mode = "practice";
-  setView("review");
-});
-
-document.getElementById("resetBtn").addEventListener("click", ()=>{
-  if(!confirm("Xoá toàn bộ tiến độ học tập? Hành động này không thể hoàn tác.")) return;
-  const theme = store.theme;
-  store = JSON.parse(JSON.stringify(DEFAULT_STORE));
-  store.order = QUESTIONS.map(q => q.id);
-  store.theme = theme;
-  saveStore();
-  renderDashboard();
-  alert("Đã reset tiến độ.");
-});
-
-/* =========================================================
-   12. THEME
-   ========================================================= */
-function applyTheme(){
-  document.documentElement.setAttribute("data-theme", store.theme);
-  document.getElementById("themeBtn").textContent = store.theme === "dark" ? "☀️" : "🌙";
-}
-document.getElementById("themeBtn").addEventListener("click", ()=>{
-  store.theme = store.theme === "dark" ? "light" : "dark";
-  saveStore();
-  applyTheme();
-});
-
-/* =========================================================
-   13. INIT
-   ========================================================= */
-(function init(){
-  applyTheme();
-
-  if(!store.order || store.order.length !== 100){
-    store.order = QUESTIONS.map(q => q.id);
-    saveStore();
-  }
-
-  // màn hình mặc định
-  mode = "practice";
-  renderDashboard();
-  renderNotes();
-  setView("dashboard");
-
-  console.log("%cPrepositions of Time – 100 Exercises ready.", "color:#2F6FA8;font-weight:bold");
-})();
-</script>
+    </script>
+    <!-- Font Inter & Icons (FontAwesome) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F6F9FC; }
+        .transition-all { transition: all 0.25s ease-in-out; }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #F1F5F9; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+    </style>
+</head>
+<body class="bg-[#F6F9FC] text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Top Header -->
+    <header class="bg-gradient-to-r from-[#24476B] to-[#1A334E] text-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchView('dashboard')">
+                <div class="bg-pastel-blue text-pastel-navy p-2 rounded-xl shadow-inner font-bold text-lg">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight tracking-tight">Prepositions of Time</h1>
+                    <p class="text-xs text-blue-200">100 Comprehensive Exercises (A1–B2)</p>
+                </div>
+            </div>
+            <!-- Navigation Tabs -->
+            <nav class="hidden md:flex items-center space-x-1">
+                <button onclick="switchView('dashboard')" id="nav-dashboard" class="px-3 py-2 rounded-lg text-sm font-medium transition-all bg-white/10 text-white"><i class="fa-solid fa-house mr-1.5"></i> Dashboard</button>
+                <button onclick="switchView('practice')" id="nav-practice" class="px-3 py-2 rounded-lg text-sm font-medium transition-all hover:bg-white/10 text-blue-100"><i class="fa-solid fa-pen-to-square mr-1.5"></i> Practice</button>
+                <button onclick="switchView('grammar')" id="nav-grammar" class="px-3 py-2 rounded-lg text-sm font-medium transition-all hover:bg-white/10 text-blue-100"><i class="fa-solid fa-book mr-1.5"></i> Grammar Notes</button>
+                <button onclick="switchView('review')" id="nav-review" class="px-3 py-2 rounded-lg text-sm font-medium transition-all hover:bg-white/10 text-blue-100"><i class="fa-solid fa-rotate-right mr-1.5"></i> Review Mistakes</button>
+                <button onclick="switchView('analysis')" id="nav-analysis" class="px-3 py-2 rounded-lg text-sm font-medium transition-all hover:bg-white/10 text-blue-100"><i class="fa-solid fa-chart-pie mr-1.5"></i> Results & Analysis</button>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center space-x-2 md:hidden">
+                <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-blue-200 hover:text-white hover:bg-white/10 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1A334E] border-t border-blue-900 px-4 pt-2 pb-4 space-y-1">
+            <button onclick="switchView('dashboard'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10"><i class="fa-solid fa-house mr-2"></i> Dashboard</button>
+            <button onclick="switchView('practice'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:bg-white/10"><i class="fa-solid fa-pen-to-square mr-2"></i> Practice</button>
+            <button onclick="switchView('grammar'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:bg-white/10"><i class="fa-solid fa-book mr-2"></i> Grammar Notes</button>
+            <button onclick="switchView('review'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:bg-white/10"><i class="fa-solid fa-rotate-right mr-2"></i> Review Mistakes</button>
+            <button onclick="switchView('analysis'); toggleMobileMenu();" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:bg-white/10"><i class="fa-solid fa-chart-pie mr-2"></i> Results & Analysis</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- VIEW 1: DASHBOARD -->
+        <section id="view-dashboard" class="space-y-6">
+            <!-- Hero Banner -->
+            <div class="bg-gradient-to-r from-pastel-navy to-blue-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg flex flex-col md:flex-row justify-between items-center">
+                <div class="space-y-3 mb-6 md:mb-0 max-w-2xl">
+                    <span class="bg-blue-500/30 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">A1–B2 Master Course</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold tracking-tight">Master Prepositions of Time</h2>
+                    <p class="text-blue-100 text-sm sm:text-base leading-relaxed">
+                        Comprehensive practice covering AT, IN, ON, FOR, SINCE, DURING, BY, UNTIL, BEFORE, AFTER, and fixed expressions with instant explanations and analytics.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <button onclick="startPractice(1)" class="bg-white text-pastel-navy hover:bg-blue-50 font-semibold px-5 py-2.5 rounded-xl shadow transition flex items-center text-sm">
+                            <i class="fa-solid fa-play mr-2 text-pastel-accent"></i> Start Learning
+                        </button>
+                        <button onclick="switchView('grammar')" class="bg-blue-800/60 hover:bg-blue-800 text-white font-medium px-5 py-2.5 rounded-xl transition flex items-center text-sm border border-blue-700">
+                            <i class="fa-solid fa-book-open mr-2"></i> Read Grammar Notes
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 text-center w-full md:w-64">
+                    <div class="text-xs uppercase tracking-wider text-blue-200 font-semibold mb-1">Overall Progress</div>
+                    <div class="text-4xl font-extrabold text-white mb-2" id="dash-percentage">0%</div>
+                    <div class="w-full bg-blue-950/50 rounded-full h-2.5 mb-3 overflow-hidden">
+                        <div id="dash-progress-bar" class="bg-emerald-400 h-2.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                    </div>
+                    <div class="text-xs text-blue-200"><span id="dash-completed-count">0</span> of 100 completed</div>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
+                    <div class="p-3 bg-blue-50 text-blue-600 rounded-xl text-xl"><i class="fa-solid fa-list-check"></i></div>
+                    <div>
+                        <p class="text-xs font-medium text-slate-500 uppercase">Total Questions</p>
+                        <h3 class="text-2xl font-bold text-slate-800">100</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
+                    <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl text-xl"><i class="fa-solid fa-circle-check"></i></div>
+                    <div>
+                        <p class="text-xs font-medium text-slate-500 uppercase">Correct Answers</p>
+                        <h3 class="text-2xl font-bold text-emerald-600" id="dash-correct-count">0</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
+                    <div class="p-3 bg-rose-50 text-rose-600 rounded-xl text-xl"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div>
+                        <p class="text-xs font-medium text-slate-500 uppercase">Incorrect / Mistakes</p>
+                        <h3 class="text-2xl font-bold text-rose-600" id="dash-incorrect-count">0</h3>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
+                    <div class="p-3 bg-amber-50 text-amber-600 rounded-xl text-xl"><i class="fa-solid fa-bullseye"></i></div>
+                    <div>
+                        <p class="text-xs font-medium text-slate-500 uppercase">Accuracy Rate</p>
+                        <h3 class="text-2xl font-bold text-amber-600" id="dash-accuracy">0%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Sections Overview -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold text-slate-800"><i class="fa-solid fa-layer-group text-pastel-accent mr-2"></i> Exercise Parts</h3>
+                    <button onclick="resetProgressConfirm()" class="text-xs text-rose-600 hover:text-rose-700 font-semibold px-3 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-100 transition"><i class="fa-solid fa-rotate-left mr-1"></i> Reset Progress</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="section-cards-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: PRACTICE -->
+        <section id="view-practice" class="hidden space-y-6">
+            <!-- Practice Header & Controls -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center space-x-3 w-full md:w-auto">
+                    <button onclick="switchView('dashboard')" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div>
+                        <span id="practice-part-badge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-100 text-blue-700">Part 1</span>
+                        <h3 class="text-lg font-bold text-slate-800 mt-1" id="practice-part-title">Multiple Choice – At, In, On</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2 w-full md:w-auto justify-end">
+                    <select id="part-selector" onchange="changeSection(this.value)" class="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl px-3 py-2 focus:ring-2 focus:ring-pastel-accent focus:outline-none">
+                        <option value="1">Part 1: Multiple Choice (1–20)</option>
+                        <option value="2">Part 2: Gap Filling (21–40)</option>
+                        <option value="3">Part 3: Choose Correct (41–60)</option>
+                        <option value="4">Part 4: Error Correction (61–75)</option>
+                        <option value="5">Part 5: Mixed Grammar (76–100)</option>
+                    </select>
+                    <button onclick="toggleBookmarkCurrent()" id="bookmark-btn" class="p-2.5 rounded-xl border border-slate-200 text-slate-400 hover:text-amber-500 hover:border-amber-200 transition" title="Bookmark Question"><i class="fa-solid fa-bookmark"></i></button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
+                <span class="text-xs font-semibold text-slate-500 whitespace-nowrap" id="question-counter">Question 1 of 20</span>
+                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                    <div id="practice-progress-bar" class="bg-pastel-accent h-2 rounded-full transition-all duration-300" style="width: 5%"></div>
+                </div>
+                <span class="text-xs font-semibold text-slate-500 whitespace-nowrap" id="section-progress-pct">5%</span>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6">
+                <div class="flex items-start justify-between">
+                    <h4 class="text-lg sm:text-xl font-semibold text-slate-900 leading-relaxed" id="question-text">
+                        <!-- Populated question text -->
+                    </h4>
+                </div>
+
+                <!-- Answer Input Area (Dynamic based on type) -->
+                <div id="answer-options-container" class="space-y-3 pt-2">
+                    <!-- Populated options or input box -->
+                </div>
+
+                <!-- Submit / Action Button -->
+                <div class="pt-4 flex items-center justify-between border-t border-slate-100">
+                    <button onclick="prevQuestion()" class="px-4 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-sm font-medium transition flex items-center"><i class="fa-solid fa-chevron-left mr-1.5"></i> Previous</button>
+                    <div class="space-x-2">
+                        <button onclick="submitAnswer()" id="submit-btn" class="px-6 py-2.5 rounded-xl bg-pastel-accent hover:bg-blue-600 text-white font-semibold text-sm shadow-sm transition">Submit Answer</button>
+                        <button onclick="nextQuestion()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-semibold text-sm shadow-sm transition">Next <i class="fa-solid fa-chevron-right ml-1.5"></i></button>
+                    </div>
+                </div>
+
+                <!-- Instant Feedback Box (Hidden initially) -->
+                <div id="feedback-box" class="hidden rounded-xl p-5 border transition-all">
+                    <!-- Populated feedback -->
+                </div>
+            </div>
+
+            <!-- Question Navigator Grid Drawer -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+                <div class="flex justify-between items-center mb-3">
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-500">Jump to Question</h5>
+                    <div class="flex items-center space-x-3 text-xs text-slate-500">
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block mr-1"></span> Correct</span>
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block mr-1"></span> Incorrect</span>
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-slate-200 inline-block mr-1"></span> Unanswered</span>
+                    </div>
+                </div>
+                <div id="question-navigator-grid" class="grid grid-cols-10 sm:grid-cols-20 gap-1.5">
+                    <!-- Populated 1-100 grid -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 3: GRAMMAR NOTES -->
+        <section id="view-grammar" class="hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-100 text-blue-700">Grammar Reference</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Prepositions of Time Master Guide</h2>
+                    <p class="text-slate-600 text-sm mt-1">Detailed rules, examples, structures, and common pitfalls for all time preposition categories (A1–B2).</p>
+                </div>
+                <div class="w-full md:w-auto">
+                    <select id="grammar-topic-select" onchange="selectGrammarTab(this.value)" class="w-full md:w-64 bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-pastel-accent focus:outline-none">
+                        <option value="1">1. AT – IN – ON</option>
+                        <option value="2">2. FOR – SINCE – DURING</option>
+                        <option value="3">3. BY – UNTIL – TILL</option>
+                        <option value="4">4. BEFORE – AFTER</option>
+                        <option value="5">5. FROM – TO – BETWEEN – AND</option>
+                        <option value="6">6. WITHIN – THROUGHOUT – OVER</option>
+                        <option value="7">7. AGO – IN – LATER</option>
+                        <option value="8">8. Zero Prepositions</option>
+                        <option value="9">9. Fixed Expressions & Special Cases</option>
+                        <option value="10">10. Mixed Prepositions & Pitfalls</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grammar Content Card -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-6" id="grammar-content-container">
+                <!-- Rendered dynamically -->
+            </div>
+        </section>
+
+        <!-- VIEW 4: REVIEW MISTAKES -->
+        <section id="view-review" class="hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-100 text-rose-700">Targeted Practice</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Review Incorrect Questions</h2>
+                    <p class="text-slate-600 text-sm mt-1">Practice and master the questions you previously answered incorrectly.</p>
+                </div>
+                <div id="review-action-container">
+                    <!-- Populated button -->
+                </div>
+            </div>
+
+            <div id="review-container" class="space-y-6">
+                <!-- Populated review content -->
+            </div>
+        </section>
+
+        <!-- VIEW 5: RESULTS & ANALYSIS -->
+        <section id="view-analysis" class="hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700">Performance Report</span>
+                        <h2 class="text-2xl font-bold text-slate-900 mt-1">Results & Detailed Analysis</h2>
+                        <p class="text-slate-600 text-sm mt-1">Comprehensive breakdown of your grammar proficiency and section performance.</p>
+                    </div>
+                    <button onclick="exportReport()" class="bg-pastel-accent hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-xl text-sm transition flex items-center shadow-sm">
+                        <i class="fa-solid fa-download mr-2"></i> Export Report
+                    </button>
+                </div>
+
+                <!-- Analysis Summary Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 p-6 rounded-2xl text-center">
+                        <div class="text-xs font-semibold uppercase text-blue-600 mb-1">Final Score</div>
+                        <div class="text-4xl font-extrabold text-slate-900 mb-1" id="analysis-score">0 / 100</div>
+                        <div class="text-sm font-medium text-blue-700" id="analysis-badge">Needs Improvement</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 p-6 rounded-2xl text-center">
+                        <div class="text-xs font-semibold uppercase text-emerald-600 mb-1">Accuracy Percentage</div>
+                        <div class="text-4xl font-extrabold text-emerald-600 mb-1" id="analysis-accuracy">0%</div>
+                        <div class="text-sm font-medium text-emerald-700">Mastery Level</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-100 p-6 rounded-2xl text-center">
+                        <div class="text-xs font-semibold uppercase text-amber-600 mb-1">Questions Attempted</div>
+                        <div class="text-4xl font-extrabold text-amber-600 mb-1" id="analysis-attempted">0 / 100</div>
+                        <div class="text-sm font-medium text-amber-700">Completion Status</div>
+                    </div>
+                </div>
+
+                <!-- Section Performance Breakdown -->
+                <h3 class="text-lg font-bold text-slate-800 mb-4">Performance by Section</h3>
+                <div class="space-y-4 mb-8" id="analysis-sections-list">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Weakest Topic & Recommendations -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                    <h3 class="text-base font-bold text-slate-800 mb-2"><i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> Targeted Recommendations</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed" id="analysis-recommendation">
+                        Complete more questions across all parts to receive personalized grammar recommendations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Modal for Notifications / Confirmations -->
+    <div id="custom-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl space-y-4 transform transition-all">
+            <div class="flex items-center space-x-3 text-amber-500" id="modal-icon">
+                <i class="fa-solid fa-circle-exclamation text-2xl"></i>
+                <h3 class="text-lg font-bold text-slate-900" id="modal-title">Confirm Action</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed" id="modal-message">Are you sure you want to proceed?</p>
+            <div class="flex justify-end space-x-3 pt-2" id="modal-buttons">
+                <button onclick="closeModal()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition">Cancel</button>
+                <button id="modal-confirm-btn" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold transition">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p>© 2026 Prepositions of Time – 100 Exercises (A1–B2). Built for Academic Excellence.</p>
+            <p class="text-slate-400">Offline-ready interactive grammar training module.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        /* --- QUESTION DATASET (100 QUESTIONS) --- */
+        const questionsData = [
+            // PART 1: MULTIPLE CHOICE (1-20)
+            { id: 1, part: 1, type: 'mcq', q: "My English class starts ______ 7:00 a.m.", options: ["in", "on", "at", "by"], ans: "at", exp: "Use AT for precise clock times.", contrast: "Use AT for specific times (at 7:00), ON for days (on Monday), IN for months/years (in May)." },
+            { id: 2, part: 1, type: 'mcq', q: "My birthday is ______ November.", options: ["at", "in", "on", "for"], ans: "in", exp: "Use IN for months, seasons, and years.", contrast: "IN + months/years; ON + specific dates/days; AT + exact times." },
+            { id: 3, part: 1, type: 'mcq', q: "We usually visit our grandparents ______ Sundays.", options: ["in", "at", "on", "by"], ans: "on", exp: "Use ON for specific days of the week.", contrast: "ON + days (on Sunday, on weekends in US); AT + times or festivals." },
+            { id: 4, part: 1, type: 'mcq', q: "She was born ______ 2005.", options: ["on", "at", "in", "for"], ans: "in", exp: "Use IN for years and centuries.", contrast: "IN + years (in 2005); ON + exact dates (on May 5th)." },
+            { id: 5, part: 1, type: 'mcq', q: "I often study English ______ the evening.", options: ["on", "at", "in", "by"], ans: "in", exp: "Use IN for parts of the day (in the morning, in the afternoon, in the evening).", contrast: "Exception: Use AT for night ('at night')." },
+            { id: 6, part: 1, type: 'mcq', q: "The meeting begins ______ half past eight.", options: ["in", "on", "at", "since"], ans: "at", exp: "Use AT for precise times and hours.", contrast: "AT for clock time (at 8:30); ON for days." },
+            { id: 7, part: 1, type: 'mcq', q: "We usually go swimming ______ summer.", options: ["at", "in", "on", "for"], ans: "in", exp: "Use IN for seasons (in summer, in winter).", contrast: "IN + seasons; ON + specific days." },
+            { id: 8, part: 1, type: 'mcq', q: "The school festival will take place ______ 15th December.", options: ["in", "at", "on", "by"], ans: "on", exp: "Use ON for specific dates (month + day).", contrast: "ON + 15th December; IN + December alone." },
+            { id: 9, part: 1, type: 'mcq', q: "My father usually gets up ______ dawn.", options: ["in", "at", "on", "for"], ans: "at", exp: "Use AT in fixed expressions like 'at dawn', 'at noon', 'at night'.", contrast: "AT dawn vs IN the morning." },
+            { id: 10, part: 1, type: 'mcq', q: "I don’t like walking alone ______ night.", options: ["on", "in", "at", "by"], ans: "at", exp: "Use AT in the fixed phrase 'at night'.", contrast: "IN the evening/morning vs AT night." },
+            { id: 11, part: 1, type: 'mcq', q: "They got married ______ Valentine’s Day.", options: ["at", "in", "on", "for"], ans: "on", exp: "Use ON for specific holidays/days (on Valentine's Day, on Christmas Day).", contrast: "ON Christmas Day vs AT Christmas (the holiday period)." },
+            { id: 12, part: 1, type: 'mcq', q: "My parents moved to Can Tho ______ 2018.", options: ["at", "in", "on", "by"], ans: "in", exp: "Use IN for years.", contrast: "IN 2018 vs ON January 1st, 2018." },
+            { id: 13, part: 1, type: 'mcq', q: "The train arrives ______ noon.", options: ["in", "on", "at", "during"], ans: "at", exp: "Use AT with noon, midnight, and midday.", contrast: "AT noon vs IN the afternoon." },
+            { id: 14, part: 1, type: 'mcq', q: "We often go shopping ______ the weekend.", options: ["at", "in", "on", "since"], ans: "at", exp: "Use 'at the weekend' (British English) or 'on the weekend' (American English). Standard UK is AT.", contrast: "AT the weekend (UK) / ON the weekend (US)." },
+            { id: 15, part: 1, type: 'mcq', q: "The new semester begins ______ September.", options: ["at", "on", "in", "for"], ans: "in", exp: "Use IN for months.", contrast: "IN September vs ON September 1st." },
+            { id: 16, part: 1, type: 'mcq', q: "I have an important examination ______ Monday morning.", options: ["at", "on", "in", "by"], ans: "on", exp: "When a day of the week is modified (Monday morning), use ON.", contrast: "IN the morning vs ON Monday morning." },
+            { id: 17, part: 1, type: 'mcq', q: "People often make resolutions ______ New Year’s Day.", options: ["in", "at", "on", "for"], ans: "on", exp: "Use ON for specific days/holidays ending in 'Day'.", contrast: "ON New Year's Day vs AT New Year." },
+            { id: 18, part: 1, type: 'mcq', q: "My grandmother was born ______ the 1960s.", options: ["at", "on", "in", "by"], ans: "in", exp: "Use IN for decades and centuries.", contrast: "IN the 1960s vs ON June 6th." },
+            { id: 19, part: 1, type: 'mcq', q: "The children usually have lunch ______ lunchtime.", options: ["in", "on", "at", "for"], ans: "at", exp: "Use AT with meal times ('at lunchtime', 'at breakfast').", contrast: "AT lunchtime vs IN the lunch break." },
+            { id: 20, part: 1, type: 'mcq', q: "I prefer studying ______ the morning.", options: ["at", "in", "on", "by"], ans: "in", exp: "Use IN for parts of the day (in the morning).", contrast: "IN the morning vs AT night." },
+
+            // PART 2: GAP FILLING (21-40)
+            { id: 21, part: 2, type: 'fill', q: "I have studied English ______ three years.", ans: "for", exp: "Use FOR with a duration of time (three years).", contrast: "FOR + duration (for 3 years) vs SINCE + starting point (since 2021)." },
+            { id: 22, part: 2, type: 'fill', q: "She has worked at this company ______ 2022.", ans: "since", exp: "Use SINCE with a specific starting point in time.", contrast: "SINCE 2022 vs FOR three years." },
+            { id: 23, part: 2, type: 'fill', q: "Nobody is allowed to use mobile phones ______ the examination.", ans: "during", exp: "Use DURING + noun phrase to indicate when an event happens.", contrast: "DURING the exam vs WHILE studying (while + clause)." },
+            { id: 24, part: 2, type: 'fill', q: "You must submit your assignment ______ Friday.", ans: "by", exp: "Use BY to indicate a deadline (not later than Friday).", contrast: "BY Friday (deadline) vs UNTIL Friday (continuing state up to Friday)." },
+            { id: 25, part: 2, type: 'fill', q: "I will wait here ______ you come back.", ans: "until", exp: "Use UNTIL / TILL to show an action continuing up to a specific point.", contrast: "UNTIL you come back (continuous action) vs BY 5 p.m. (deadline)." },
+            { id: 26, part: 2, type: 'fill', q: "Please wash your hands ______ eating.", ans: "before", exp: "Use BEFORE to indicate prior time order.", contrast: "BEFORE eating vs AFTER eating." },
+            { id: 27, part: 2, type: 'fill', q: "We usually go for a walk ______ dinner.", ans: "after", exp: "Use AFTER to indicate subsequent time order.", contrast: "AFTER dinner vs BEFORE dinner." },
+            { id: 28, part: 2, type: 'fill', q: "The library is open ______ Monday ______ Saturday.", ans: "from to", accepted: ["from to", "from... to", "from ... to"], ansDisplay: "from ... to", exp: "Use 'FROM ... TO ...' to specify time ranges.", contrast: "FROM morning TO night." },
+            { id: 29, part: 2, type: 'fill', q: "The manager expects everyone to finish the project ______ two weeks.", ans: "within", exp: "Use WITHIN to mean 'before a time limit expires' (inside two weeks).", contrast: "WITHIN two weeks vs FOR two weeks." },
+            { id: 30, part: 2, type: 'fill', q: "He has been interested in music ______ he was a child.", ans: "since", exp: "Use SINCE + clause indicating starting point.", contrast: "SINCE he was a child vs FOR his whole life." },
+            { id: 31, part: 2, type: 'fill', q: "My brother slept ______ the entire afternoon.", ans: "during", exp: "Use DURING + noun phrase representing a period.", contrast: "DURING the afternoon vs FOR hours." },
+            { id: 32, part: 2, type: 'fill', q: "You should arrive at the airport ______ 6 p.m. to catch your flight.", ans: "before", exp: "Use BEFORE to mean earlier than a specific time point.", contrast: "BEFORE 6 p.m. vs BY 6 p.m." },
+            { id: 33, part: 2, type: 'fill', q: "The shop remained closed ______ the storm.", ans: "during", exp: "Use DURING for an event or period of time.", contrast: "DURING the storm vs UNTIL the storm." },
+            { id: 34, part: 2, type: 'fill', q: "She worked ______ five hours without taking a break.", ans: "for", exp: "Use FOR with a duration of time.", contrast: "FOR five hours vs SINCE 8 a.m." },
+            { id: 35, part: 2, type: 'fill', q: "Please stay here ______ further instructions.", ans: "until", exp: "Use UNTIL for an action continuing up to a point in time.", contrast: "UNTIL further instructions vs BY tomorrow." },
+            { id: 36, part: 2, type: 'fill', q: "The course runs ______ January ______ March.", ans: "from to", accepted: ["from to", "from... to", "from ... to"], ansDisplay: "from ... to", exp: "Use 'FROM ... TO ...' for starting and ending points.", contrast: "FROM January TO March." },
+            { id: 37, part: 2, type: 'fill', q: "We need to complete this task ______ the end of the day.", ans: "by", exp: "Use BY for deadlines ('by the end of the day').", contrast: "BY the end of the day (deadline)." },
+            { id: 38, part: 2, type: 'fill', q: "He hasn’t visited his hometown ______ last summer.", ans: "since", exp: "Use SINCE with the starting point (last summer) in present perfect sentences.", contrast: "SINCE last summer vs FOR a year." },
+            { id: 39, part: 2, type: 'fill', q: "I usually review my lessons ______ going to bed.", ans: "before", exp: "Use BEFORE for prior action.", contrast: "BEFORE going to bed vs AFTER waking up." },
+            { id: 40, part: 2, type: 'fill', q: "The students went out for lunch ______ the class had finished.", ans: "after", exp: "Use AFTER to show subsequent action.", contrast: "AFTER the class finished vs BEFORE the class." },
+
+            // PART 3: CHOOSE THE CORRECT PREPOSITION (41-60)
+            { id: 41, part: 3, type: 'mcq', q: "I haven’t seen my best friend ______ last Christmas.", options: ["for", "since", "during", "by"], ans: "since", exp: "Use SINCE with a specific starting point (last Christmas) in present perfect.", contrast: "SINCE last Christmas vs FOR months." },
+            { id: 42, part: 3, type: 'mcq', q: "We stayed at home ______ the heavy rain.", options: ["during", "since", "for", "until"], ans: "during", exp: "Use DURING + noun phrase ('the heavy rain').", contrast: "DURING the rain vs BECAUSE OF the rain." },
+            { id: 43, part: 3, type: 'mcq', q: "She has been learning Chinese ______ six months.", options: ["since", "during", "for", "by"], ans: "for", exp: "Use FOR with a time duration ('six months').", contrast: "FOR six months vs SINCE January." },
+            { id: 44, part: 3, type: 'mcq', q: "You must return these books ______ next Monday.", options: ["until", "by", "since", "during"], ans: "by", exp: "Use BY as a deadline (not later than next Monday).", contrast: "BY next Monday (deadline) vs UNTIL next Monday." },
+            { id: 45, part: 3, type: 'mcq', q: "I will stay here ______ 10 p.m.", options: ["by", "since", "until", "for"], ans: "until", exp: "Use UNTIL for an action continuing up to a specific time.", contrast: "UNTIL 10 p.m. vs BY 10 p.m." },
+            { id: 46, part: 3, type: 'mcq', q: "He left the office ______ finishing his work.", options: ["after", "during", "since", "by"], ans: "after", exp: "Use AFTER to show subsequent action.", contrast: "AFTER finishing vs BEFORE finishing." },
+            { id: 47, part: 3, type: 'mcq', q: "Please call me ______ you arrive home.", options: ["before", "during", "for", "since"], ans: "before", exp: "Use BEFORE in time clauses indicating prior action.", contrast: "BEFORE you arrive vs AFTER you arrive." },
+            { id: 48, part: 3, type: 'mcq', q: "The museum is open ______ 9 a.m. to 5 p.m.", options: ["since", "from", "during", "by"], ans: "from", exp: "Use FROM to indicate the beginning of a time range (matched with 'to').", contrast: "FROM 9 a.m. to 5 p.m." },
+            { id: 49, part: 3, type: 'mcq', q: "I haven’t eaten anything ______ this morning.", options: ["for", "during", "since", "by"], ans: "since", exp: "Use SINCE with a starting point in time ('this morning').", contrast: "SINCE this morning vs FOR hours." },
+            { id: 50, part: 3, type: 'mcq', q: "She completed her homework ______ two hours.", options: ["since", "within", "until", "during"], ans: "within", exp: "Use WITHIN to mean inside a time limit ('within two hours').", contrast: "WITHIN two hours (takes less than 2 hours) vs FOR two hours (takes full 2 hours)." },
+            { id: 51, part: 3, type: 'mcq', q: "We have lived in this neighbourhood ______ 2019.", options: ["for", "during", "since", "by"], ans: "since", exp: "Use SINCE with a starting year (2019).", contrast: "SINCE 2019 vs FOR 5 years." },
+            { id: 52, part: 3, type: 'mcq', q: "He usually reads books ______ the journey.", options: ["during", "since", "until", "by"], ans: "during", exp: "Use DURING + noun phrase ('the journey').", contrast: "DURING the journey vs WHILE traveling." },
+            { id: 53, part: 3, type: 'mcq', q: "I will have finished the report ______ tomorrow morning.", options: ["until", "by", "since", "for"], ans: "by", exp: "Use BY with future perfect tense to indicate a deadline.", contrast: "BY tomorrow morning vs UNTIL tomorrow." },
+            { id: 54, part: 3, type: 'mcq', q: "The children played outside ______ sunset.", options: ["until", "since", "for", "by"], ans: "until", exp: "Use UNTIL for an action continuing up to sunset.", contrast: "UNTIL sunset vs BY sunset." },
+            { id: 55, part: 3, type: 'mcq', q: "We had dinner ______ watching the film.", options: ["during", "before", "since", "for"], ans: "before", exp: "Use BEFORE to indicate prior event.", contrast: "BEFORE watching vs AFTER watching." },
+            { id: 56, part: 3, type: 'mcq', q: "The shop will remain open ______ further notice.", options: ["until", "by", "since", "during"], ans: "until", exp: "Use UNTIL in the fixed phrase 'until further notice'.", contrast: "UNTIL further notice." },
+            { id: 57, part: 3, type: 'mcq', q: "She has been absent ______ three days.", options: ["since", "for", "during", "by"], ans: "for", exp: "Use FOR with a time duration ('three days').", contrast: "FOR three days vs SINCE Monday." },
+            { id: 58, part: 3, type: 'mcq', q: "The students must finish the test ______ the allotted time.", options: ["within", "since", "until", "for"], ans: "within", exp: "Use WITHIN to mean inside the boundaries of a time period.", contrast: "WITHIN the time limit." },
+            { id: 59, part: 3, type: 'mcq', q: "We talked about our future plans ______ the meeting.", options: ["since", "during", "until", "by"], ans: "during", exp: "Use DURING + noun phrase ('the meeting').", contrast: "DURING the meeting vs WHILE meeting." },
+            { id: 60, part: 3, type: 'mcq', q: "I usually feel sleepy ______ having a big lunch.", options: ["before", "after", "during", "since"], ans: "after", exp: "Use AFTER to indicate subsequent time.", contrast: "AFTER lunch vs BEFORE lunch." },
+
+            // PART 4: ERROR CORRECTION (61-75)
+            { id: 61, part: 4, type: 'fill', q: "Error Correction: I was born on 2004.", ans: "in", exp: "Incorrect: 'on 2004'. Correct: 'in 2004'. Use IN for years.", contrast: "IN + years vs ON + dates." },
+            { id: 62, part: 4, type: 'fill', q: "Error Correction: We usually have breakfast in 7 a.m.", ans: "at", exp: "Incorrect: 'in 7 a.m.'. Correct: 'at 7 a.m.'. Use AT for exact clock times.", contrast: "AT 7 a.m. vs IN the morning." },
+            { id: 63, part: 4, type: 'fill', q: "Error Correction: My English examination is in Monday.", ans: "on", exp: "Incorrect: 'in Monday'. Correct: 'on Monday'. Use ON for days of the week.", contrast: "ON Monday vs IN September." },
+            { id: 64, part: 4, type: 'fill', q: "Error Correction: She has lived here for 2020.", ans: "since", exp: "Incorrect: 'for 2020'. Correct: 'since 2020'. Use SINCE with starting points.", contrast: "SINCE 2020 vs FOR 4 years." },
+            { id: 65, part: 4, type: 'fill', q: "Error Correction: I waited since two hours for the bus.", ans: "for", exp: "Incorrect: 'since two hours'. Correct: 'for two hours'. Use FOR with durations.", contrast: "FOR two hours vs SINCE 2 p.m." },
+            { id: 66, part: 4, type: 'fill', q: "Error Correction: He usually goes jogging on the morning.", ans: "in", exp: "Incorrect: 'on the morning'. Correct: 'in the morning'. Use IN for parts of the day.", contrast: "IN the morning vs ON Monday morning." },
+            { id: 67, part: 4, type: 'fill', q: "Error Correction: They arrived to the airport at midnight.", ans: "at", exp: "Incorrect: 'arrived to'. Correct: 'arrived at' the airport.", contrast: "Arrive AT (buildings/places) vs Arrive IN (cities/countries)." },
+            { id: 68, part: 4, type: 'fill', q: "Error Correction: I will stay here by you return.", ans: "until", exp: "Incorrect: 'by you return'. Correct: 'until you return' (continuous action up to a point).", contrast: "UNTIL you return vs BY tomorrow." },
+            { id: 69, part: 4, type: 'fill', q: "Error Correction: She has been studying English during three years.", ans: "for", exp: "Incorrect: 'during three years'. Correct: 'for three years' (duration).", contrast: "FOR three years vs DURING the course." },
+            { id: 70, part: 4, type: 'fill', q: "Error Correction (Ý định: cửa hàng đóng cửa lúc 9 giờ tối): The shop closes until 9 p.m. every day.", ans: "at", exp: "Incorrect: 'closes until'. Correct: 'closes at 9 p.m.' (exact time).", contrast: "Closes AT 9 p.m. vs Open UNTIL 9 p.m." },
+            { id: 71, part: 4, type: 'fill', q: "Error Correction: We usually visit our relatives in Christmas Day.", ans: "on", exp: "Incorrect: 'in Christmas Day'. Correct: 'on Christmas Day' (specific day).", contrast: "ON Christmas Day vs AT Christmas." },
+            { id: 72, part: 4, type: 'fill', q: "Error Correction: He left the room during the meeting ended.", ans: "after", exp: "Incorrect: 'during the meeting ended' (clause). Correct: 'after the meeting ended'. Use AFTER with clauses.", contrast: "DURING + noun vs AFTER + clause." },
+            { id: 73, part: 4, type: 'fill', q: "Error Correction: I haven’t seen him for last week.", ans: "since", exp: "Incorrect: 'for last week'. Correct: 'since last week' (starting point).", contrast: "SINCE last week vs FOR a week." },
+            { id: 74, part: 4, type: 'fill', q: "Error Correction (Ý định: hạn chót là thứ Sáu): She will finish the assignment until Friday.", ans: "by", exp: "Incorrect: 'until Friday' for a deadline. Correct: 'by Friday'.", contrast: "BY Friday (deadline) vs UNTIL Friday (duration)." },
+            { id: 75, part: 4, type: 'fill', q: "Error Correction: I usually go to bed in midnight.", ans: "at", exp: "Incorrect: 'in midnight'. Correct: 'at midnight'. Use AT with midnight/noon.", contrast: "AT midnight vs IN the night." },
+
+            // PART 5: MIXED GRAMMAR CHALLENGE (76-100)
+            { id: 76, part: 5, type: 'mcq', q: "I haven’t spoken to her ______ Monday.", options: ["for", "since", "during", "by"], ans: "since", exp: "Use SINCE with a starting point in time ('Monday').", contrast: "SINCE Monday vs FOR two days." },
+            { id: 77, part: 5, type: 'mcq', q: "My brother graduated from university three years ______.", options: ["later", "since", "ago", "for"], ans: "ago", exp: "Use AGO with past simple tense to count backward from now ('three years ago').", contrast: "THREE YEARS AGO vs FOR THREE YEARS." },
+            { id: 78, part: 5, type: 'mcq', q: "I’ll see you ______ next Friday.", options: ["on", "at", "in", "No preposition"], ans: "No preposition", accepted: ["no preposition", "-", "none"], ansDisplay: "No preposition", exp: "Do not use prepositions before words like 'next', 'last', 'this', 'every' (e.g., 'next Friday').", contrast: "ON Friday vs NEXT Friday (zero preposition)." },
+            { id: 79, part: 5, type: 'mcq', q: "We arrived just ______ time to catch the last bus.", options: ["on", "in", "at", "by"], ans: "in", exp: "Idiom: 'in time' means with enough time to spare before something happens.", contrast: "IN time (with time to spare) vs ON time (punctual, exactly on schedule)." },
+            { id: 80, part: 5, type: 'mcq', q: "The train arrived ______ time, exactly at 8:30.", options: ["in", "at", "on", "for"], ans: "on", exp: "Idiom: 'on time' means punctually, exactly at the scheduled time.", contrast: "ON time (punctual) vs IN time (early enough)." },
+            { id: 81, part: 5, type: 'fill', q: "I have been waiting here ______ a long time.", ans: "for", exp: "Use FOR with a time duration ('a long time').", contrast: "FOR a long time vs SINCE 2 o'clock." },
+            { id: 82, part: 5, type: 'fill', q: "The company was established ______ the beginning of 2010.", ans: "at", exp: "Fixed expression: 'at the beginning of / at the end of'.", contrast: "AT the beginning vs IN the beginning." },
+            { id: 83, part: 5, type: 'fill', q: "We usually exchange gifts ______ Christmas.", ans: "at", exp: "Use AT for holiday periods ('at Christmas', 'at Easter').", contrast: "AT Christmas (holiday period) vs ON Christmas Day." },
+            { id: 84, part: 5, type: 'fill', q: "I haven’t finished my homework ______ now.", ans: "until", accepted: ["until", "up to", "till"], ansDisplay: "until / up to", exp: "Use 'until now' or 'up to now' to indicate up to the present moment.", contrast: "UNTIL now vs BY now." },
+            { id: 85, part: 5, type: 'fill', q: "The students must remain silent ______ the lesson.", ans: "during", exp: "Use DURING + noun phrase ('the lesson').", contrast: "DURING the lesson vs WHILE in class." },
+            { id: 86, part: 5, type: 'fill', q: "The meeting will take place ______ the end of this month.", ans: "at", exp: "Fixed expression: 'at the end of this month'.", contrast: "AT the end vs IN the end (finally)." },
+            { id: 87, part: 5, type: 'fill', q: "She will return ______ a few minutes.", ans: "in", exp: "Use IN + time period to indicate a future point ('in a few minutes').", contrast: "IN a few minutes (from now) vs FOR a few minutes." },
+            { id: 88, part: 5, type: 'fill', q: "He has been working here ______ he graduated.", ans: "since", exp: "Use SINCE + clause indicating starting point.", contrast: "SINCE he graduated vs FOR years." },
+            { id: 89, part: 5, type: 'fill', q: "We usually have a short break ______ classes.", ans: "between", accepted: ["between", "during"], ansDisplay: "between (or during)", exp: "Use BETWEEN to indicate the space dividing two classes.", contrast: "BETWEEN classes vs DURING class." },
+            { id: 90, part: 5, type: 'fill', q: "The project must be completed ______ the next three days.", ans: "within", accepted: ["within", "in"], ansDisplay: "within (or in)", exp: "Use WITHIN or IN for time limits or future completion spans.", contrast: "WITHIN 3 days vs FOR 3 days." },
+            { id: 91, part: 5, type: 'fill', q: "I haven’t visited my hometown ______ ages.", ans: "for", exp: "Use FOR with durations like 'for ages'.", contrast: "FOR ages vs SINCE ages (incorrect)." },
+            { id: 92, part: 5, type: 'fill', q: "She was born ______ 12th May, 2006.", ans: "on", exp: "Use ON for specific dates (month + day + year).", contrast: "ON May 12th vs IN May." },
+            { id: 93, part: 5, type: 'fill', q: "I will call you ______ I finish my assignment.", ans: "when", accepted: ["when", "as soon as", "once", "after"], ansDisplay: "when / as soon as", exp: "Use conjunctions like 'when', 'as soon as', or 'once' to introduce time clauses.", contrast: "WHEN I finish vs BEFORE I finish." },
+            { id: 94, part: 5, type: 'fill', q: "The restaurant is usually crowded ______ weekends. (British English)", ans: "at", exp: "British English uses 'at weekends', while American English uses 'on weekends'.", contrast: "AT weekends (UK) vs ON weekends (US)." },
+            { id: 95, part: 5, type: 'fill', q: "They have been friends ______ childhood.", ans: "since", exp: "Use SINCE with a starting point in the past ('childhood').", contrast: "SINCE childhood vs FOR years." },
+            { id: 96, part: 5, type: 'fill', q: "The children stayed awake ______ midnight.", ans: "until", accepted: ["until", "till"], ansDisplay: "until / till", exp: "Use UNTIL / TILL for continuous action up to midnight.", contrast: "UNTIL midnight vs BY midnight." },
+            { id: 97, part: 5, type: 'fill', q: "We should finish the discussion ______ 30 minutes.", ans: "within", accepted: ["within", "in"], ansDisplay: "within / in", exp: "Use WITHIN or IN to indicate inside 30 minutes.", contrast: "WITHIN 30 minutes vs FOR 30 minutes." },
+            { id: 98, part: 5, type: 'fill', q: "He moved to London ______ the age of 25.", ans: "at", exp: "Fixed expression: 'at the age of [number]' (at age 25).", contrast: "AT the age of 25." },
+            { id: 99, part: 5, type: 'fill', q: "I haven’t had a holiday ______ last year.", ans: "since", exp: "Use SINCE with a starting point ('last year').", contrast: "SINCE last year vs FOR a year." },
+            { id: 100, part: 5, type: 'fill', q: "The students have to complete the examination ______ two hours.", ans: "within", accepted: ["within", "in"], ansDisplay: "within / in", exp: "Use WITHIN or IN for time allowance limits.", contrast: "WITHIN two hours vs FOR two hours." }
+        ];
+
+        /* --- STATE MANAGEMENT --- */
+        let userProgress = JSON.parse(localStorage.getItem('time_prep_progress')) || {
+            completed: {}, // id: true/false
+            correct: {},   // id: true/false
+            answers: {},   // id: userAnswer
+            bookmarks: {}  // id: true/false
+        };
+
+        let currentView = 'dashboard';
+        let currentPart = 1;
+        let currentQuestionIndex = 0; // index within current part or filtered list
+        let currentFilteredQuestions = [];
+
+        /* --- LOCAL STORAGE SAVE --- */
+        function saveProgress() {
+            localStorage.setItem('time_prep_progress', JSON.stringify(userProgress));
+            updateDashboardStats();
+        }
+
+        /* --- VIEW ROUTER --- */
+        function switchView(viewName) {
+            currentView = viewName;
+            ['dashboard', 'practice', 'grammar', 'review', 'analysis'].forEach(v => {
+                document.getElementById(`view-${v}`).classList.add('hidden');
+                const navBtn = document.getElementById(`nav-${v}`);
+                if (navBtn) {
+                    navBtn.className = "px-3 py-2 rounded-lg text-sm font-medium transition-all text-blue-100 hover:bg-white/10";
+                }
+            });
+
+            document.getElementById(`view-${viewName}`).classList.remove('hidden');
+            const activeNav = document.getElementById(`nav-${viewName}`);
+            if (activeNav) {
+                activeNav.className = "px-3 py-2 rounded-lg text-sm font-medium transition-all bg-white/10 text-white";
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (viewName === 'dashboard') {
+                updateDashboardStats();
+            } else if (viewName === 'practice') {
+                loadPracticeQuestions(currentPart);
+            } else if (viewName === 'grammar') {
+                renderGrammarNotes(1);
+            } else if (viewName === 'review') {
+                renderReviewMistakes();
+            } else if (viewName === 'analysis') {
+                renderAnalysisReport();
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        /* --- DASHBOARD STATS --- */
+        function updateDashboardStats() {
+            const total = questionsData.length;
+            let completedCount = 0;
+            let correctCount = 0;
+            let incorrectCount = 0;
+
+            questionsData.forEach(q => {
+                if (userProgress.completed[q.id]) {
+                    completedCount++;
+                    if (userProgress.correct[q.id]) {
+                        correctCount++;
+                    } else {
+                        incorrectCount++;
+                    }
+                }
+            });
+
+            const pct = Math.round((completedCount / total) * 100);
+            const accuracy = completedCount > 0 ? Math.round((correctCount / completedCount) * 100) : 0;
+
+            document.getElementById('dash-percentage').innerText = pct + '%';
+            document.getElementById('dash-progress-bar').style.width = pct + '%';
+            document.getElementById('dash-completed-count').innerText = completedCount;
+            document.getElementById('dash-correct-count').innerText = correctCount;
+            document.getElementById('dash-incorrect-count').innerText = incorrectCount;
+            document.getElementById('dash-accuracy').innerText = accuracy + '%';
+
+            renderSectionCards();
+        }
+
+        function renderSectionCards() {
+            const container = document.getElementById('section-cards-container');
+            const partsInfo = [
+                { id: 1, title: "Part 1: Multiple Choice", range: "Q1–20", desc: "AT, IN, ON core rules" },
+                { id: 2, title: "Part 2: Gap Filling", range: "Q21–40", desc: "For, Since, During, By, Until..." },
+                { id: 3, title: "Part 3: Choose Correct", range: "Q41–60", desc: "Advanced preposition nuances" },
+                { id: 4, title: "Part 4: Error Correction", range: "Q61–75", desc: "Identify and fix time errors" },
+                { id: 5, title: "Part 5: Mixed Grammar", range: "Q76–100", desc: "Comprehensive challenge & idioms" }
+            ];
+
+            container.innerHTML = partsInfo.map(p => {
+                const partQs = questionsData.filter(q => q.part === p.id);
+                const completed = partQs.filter(q => userProgress.completed[q.id]).length;
+                const correct = partQs.filter(q => userProgress.correct[q.id]).length;
+                const pPct = Math.round((completed / partQs.length) * 100);
+
+                return `
+                    <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 flex flex-col justify-between hover:shadow-md transition cursor-pointer" onclick="startPractice(${p.id})">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-100 text-blue-700">${p.range}</span>
+                                <span class="text-xs font-semibold text-slate-500">${completed}/${partQs.length} done</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-base mb-1">${p.title}</h4>
+                            <p class="text-xs text-slate-500 mb-4">${p.desc}</p>
+                        </div>
+                        <div>
+                            <div class="w-full bg-slate-200 rounded-full h-2 mb-2 overflow-hidden">
+                                <div class="bg-pastel-accent h-2 rounded-full" style="width: ${pPct}%"></div>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-slate-600 font-medium">
+                                <span>Correct: ${correct}</span>
+                                <span class="text-pastel-accent font-semibold hover:underline">Practice Now <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function startPractice(partId) {
+            currentPart = partId;
+            document.getElementById('part-selector').value = partId;
+            loadPracticeQuestions(partId);
+            switchView('practice');
+        }
+
+        /* --- PRACTICE MODE --- */
+        function loadPracticeQuestions(partId) {
+            currentPart = parseInt(partId);
+            currentFilteredQuestions = questionsData.filter(q => q.part === currentPart);
+            currentQuestionIndex = 0;
+            renderCurrentQuestion();
+            renderNavigatorGrid();
+        }
+
+        function changeSection(partId) {
+            loadPracticeQuestions(partId);
+        }
+
+        function renderCurrentQuestion() {
+            const q = currentFilteredQuestions[currentQuestionIndex];
+            const total = currentFilteredQuestions.length;
+            const globalIndex = questionsData.findIndex(item => item.id === q.id) + 1;
+
+            // Header labels
+            const partNames = {
+                1: "Part 1: Multiple Choice – At, In, On",
+                2: "Part 2: Gap Filling – Prepositions Word Bank",
+                3: "Part 3: Choose Correct Preposition",
+                4: "Part 4: Error Correction",
+                5: "Part 5: Mixed Grammar Challenge"
+            };
+            document.getElementById('practice-part-badge').innerText = `Part ${q.part} (Q${globalIndex}/100)`;
+            document.getElementById('practice-part-title').innerText = partNames[q.part];
+            document.getElementById('question-counter').innerText = `Question ${currentQuestionIndex + 1} of ${total}`;
+            
+            const pct = Math.round(((currentQuestionIndex + 1) / total) * 100);
+            document.getElementById('practice-progress-bar').style.width = pct + '%';
+            document.getElementById('section-progress-pct').innerText = pct + '%';
+
+            // Bookmark button state
+            const bookmarkBtn = document.getElementById('bookmark-btn');
+            if (userProgress.bookmarks[q.id]) {
+                bookmarkBtn.className = "p-2.5 rounded-xl border border-amber-300 bg-amber-50 text-amber-500 transition";
+            } else {
+                bookmarkBtn.className = "p-2.5 rounded-xl border border-slate-200 text-slate-400 hover:text-amber-500 hover:border-amber-200 transition";
+            }
+
+            // Question text
+            document.getElementById('question-text').innerHTML = `<span class="text-blue-600 font-bold mr-2">Q${globalIndex}.</span> ${q.q}`;
+
+            // Options / Input area
+            const optionsContainer = document.getElementById('answer-options-container');
+            const savedAns = userProgress.answers[q.id] || '';
+            const isCompleted = userProgress.completed[q.id];
+
+            if (q.type === 'mcq') {
+                optionsContainer.innerHTML = q.options.map((opt, idx) => {
+                    const isSelected = savedAns === opt;
+                    const letter = String.fromCharCode(65 + idx);
+                    let btnClass = "w-full text-left p-3.5 rounded-xl border transition flex items-center justify-between font-medium text-sm ";
+                    if (isSelected) {
+                        btnClass += "border-pastel-accent bg-blue-50 text-blue-900 shadow-sm";
+                    } else {
+                        btnClass += "border-slate-200 bg-white hover:bg-slate-50 text-slate-700";
+                    }
+                    return `
+                        <button onclick="selectOption('${opt}')" class="${btnClass}">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-7 h-7 rounded-lg bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-600">${letter}</span>
+                                <span>${opt}</span>
+                            </div>
+                            ${isSelected ? '<i class="fa-solid fa-circle-check text-pastel-accent"></i>' : ''}
+                        </button>
+                    `;
+                }).join('');
+            } else {
+                // Gap filling or Error correction input
+                optionsContainer.innerHTML = `
+                    <div class="space-y-2">
+                        <label class="block text-xs font-semibold text-slate-500 uppercase">Your Answer:</label>
+                        <div class="flex gap-3">
+                            <input type="text" id="fill-answer-input" value="${savedAns}" placeholder="Type your preposition here..." class="flex-grow bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 font-medium text-sm focus:ring-2 focus:ring-pastel-accent focus:outline-none">
+                            <button onclick="submitTextAnswer()" class="bg-pastel-accent hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl text-sm transition shadow-sm">Submit</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Feedback box
+            const feedbackBox = document.getElementById('feedback-box');
+            if (isCompleted) {
+                showFeedback(q, savedAns);
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+        }
+
+        function selectOption(opt) {
+            const q = currentFilteredQuestions[currentQuestionIndex];
+            userProgress.answers[q.id] = opt;
+            renderCurrentQuestion();
+        }
+
+        function submitAnswer() {
+            const q = currentFilteredQuestions[currentQuestionIndex];
+            let userAns = userProgress.answers[q.id];
+
+            if (q.type !== 'mcq') {
+                const inputEl = document.getElementById('fill-answer-input');
+                if (inputEl) {
+                    userAns = inputEl.value.trim();
+                    userProgress.answers[q.id] = userAns;
+                }
+            }
+
+            if (!userAns) {
+                showNotification("Please select or type an answer before submitting.", "warning");
+                return;
+            }
+
+            // Check correctness
+            let isCorrect = false;
+            const cleanUserAns = userAns.toLowerCase();
+            const cleanCorrectAns = q.ans.toLowerCase();
+
+            if (cleanUserAns === cleanCorrectAns) {
+                isCorrect = true;
+            } else if (q.accepted && q.accepted.some(acc => acc.toLowerCase() === cleanUserAns)) {
+                isCorrect = true;
+            }
+
+            userProgress.completed[q.id] = true;
+            userProgress.correct[q.id] = isCorrect;
+            saveProgress();
+
+            showFeedback(q, userAns);
+            renderNavigatorGrid();
+        }
+
+        function submitTextAnswer() {
+            submitAnswer();
+        }
+
+        function showFeedback(q, userAns) {
+            const isCorrect = userProgress.correct[q.id];
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.classList.remove('hidden');
+
+            const displayCorrect = q.ansDisplay || q.ans;
+
+            if (isCorrect) {
+                feedbackBox.className = "rounded-xl p-5 border border-emerald-200 bg-emerald-50 text-emerald-900 transition-all space-y-3";
+                feedbackBox.innerHTML = `
+                    <div class="flex items-center space-x-2 font-bold text-emerald-800 text-base">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl"></i>
+                        <span>Correct Answer!</span>
+                    </div>
+                    <p class="text-sm text-emerald-700 leading-relaxed"><strong class="font-semibold">Explanation:</strong> ${q.exp}</p>
+                    <p class="text-xs text-emerald-600 bg-emerald-100/60 p-2.5 rounded-lg"><strong class="font-semibold">Contrast Note:</strong> ${q.contrast}</p>
+                `;
+            } else {
+                feedbackBox.className = "rounded-xl p-5 border border-rose-200 bg-rose-50 text-rose-900 transition-all space-y-3";
+                feedbackBox.innerHTML = `
+                    <div class="flex items-center space-x-2 font-bold text-rose-800 text-base">
+                        <i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>
+                        <span>Incorrect Answer. (Your answer: <span class="underline">${userAns || 'None'}</span>)</span>
+                    </div>
+                    <p class="text-sm font-semibold text-rose-800">Correct Answer: <span class="bg-rose-100 px-2 py-0.5 rounded text-rose-900">${displayCorrect}</span></p>
+                    <p class="text-sm text-rose-700 leading-relaxed"><strong class="font-semibold">Explanation:</strong> ${q.exp}</p>
+                    <p class="text-xs text-rose-600 bg-rose-100/60 p-2.5 rounded-lg"><strong class="font-semibold">Contrast Note:</strong> ${q.contrast}</p>
+                `;
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < currentFilteredQuestions.length - 1) {
+                currentQuestionIndex++;
+                renderCurrentQuestion();
+            } else {
+                // Move to next part if available
+                if (currentPart < 5) {
+                    currentPart++;
+                    document.getElementById('part-selector').value = currentPart;
+                    loadPracticeQuestions(currentPart);
+                    showNotification(`Moving to Part ${currentPart}!`, "info");
+                } else {
+                    showNotification("You have reached the end of the 100 exercises! Check your Results & Analysis.", "success");
+                    switchView('analysis');
+                }
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                renderCurrentQuestion();
+            } else if (currentPart > 1) {
+                currentPart--;
+                document.getElementById('part-selector').value = currentPart;
+                currentFilteredQuestions = questionsData.filter(q => q.part === currentPart);
+                currentQuestionIndex = currentFilteredQuestions.length - 1;
+                renderCurrentQuestion();
+                renderNavigatorGrid();
+            }
+        }
+
+        function toggleBookmarkCurrent() {
+            const q = currentFilteredQuestions[currentQuestionIndex];
+            userProgress.bookmarks[q.id] = !userProgress.bookmarks[q.id];
+            saveProgress();
+            renderCurrentQuestion();
+        }
+
+        function renderNavigatorGrid() {
+            const grid = document.getElementById('question-navigator-grid');
+            grid.innerHTML = questionsData.map((q, idx) => {
+                const isCurrent = q.id === currentFilteredQuestions[currentQuestionIndex].id;
+                const isCompleted = userProgress.completed[q.id];
+                const isCorrect = userProgress.correct[q.id];
+
+                let bgClass = "bg-slate-100 text-slate-600 hover:bg-slate-200";
+                if (isCompleted) {
+                    bgClass = isCorrect ? "bg-emerald-500 text-white font-bold" : "bg-rose-500 text-white font-bold";
+                }
+                if (isCurrent) {
+                    bgClass += " ring-2 ring-pastel-accent ring-offset-2";
+                }
+
+                return `
+                    <button onclick="jumpToQuestion(${q.id})" class="h-8 rounded-lg text-xs font-semibold flex items-center justify-center transition ${bgClass}" title="Question ${q.id}">
+                        ${q.id}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function jumpToQuestion(qId) {
+            const targetQ = questionsData.find(q => q.id === qId);
+            if (targetQ) {
+                if (targetQ.part !== currentPart) {
+                    currentPart = targetQ.part;
+                    document.getElementById('part-selector').value = currentPart;
+                    currentFilteredQuestions = questionsData.filter(q => q.part === currentPart);
+                }
+                currentQuestionIndex = currentFilteredQuestions.findIndex(q => q.id === qId);
+                renderCurrentQuestion();
+                renderNavigatorGrid();
+            }
+        }
+
+        /* --- GRAMMAR NOTES DATA & RENDERER --- */
+        const grammarNotesData = {
+            1: {
+                title: "1. AT – IN – ON (Time Triangle)",
+                def: "The three foundational prepositions of time ordered by specificity from most specific to broadest.",
+                rules: [
+                    { label: "AT", use: "Exact clock times, precise moments, meal times, and specific festivals.", examples: ["at 7:30 a.m.", "at noon / at midnight", "at lunchtime", "at Christmas"] },
+                    { label: "ON", use: "Days of the week, specific dates, and holidays ending in 'Day'.", examples: ["on Monday", "on 15th December", "on New Year's Day", "on Valentine's Day"] },
+                    { label: "IN", use: "Months, seasons, years, decades, centuries, and parts of the day.", examples: ["in September", "in summer", "in 2018", "in the 1960s", "in the morning"] }
+                ],
+                pitfalls: "Do not confuse 'in the morning' with 'on Monday morning'. When a day is specified, use ON."
+            },
+            2: {
+                title: "2. FOR – SINCE – DURING",
+                def: "Prepositions used to express duration, starting points, and timeframes.",
+                rules: [
+                    { label: "FOR", use: "Used with a period or duration of time (answers 'How long?').", examples: ["for three years", "for six months", "for a long time"] },
+                    { label: "SINCE", use: "Used with a specific starting point in time (used with Present Perfect).", examples: ["since 2022", "since last summer", "since he was a child"] },
+                    { label: "DURING", use: "Used before a noun phrase to indicate when an event happens.", examples: ["during the examination", "during the storm", "during the meeting"] }
+                ],
+                pitfalls: "DURING is followed by a noun phrase, whereas WHILE is followed by a clause with a verb ('while studying')."
+            },
+            3: {
+                title: "3. BY – UNTIL – TILL",
+                def: "Expressing deadlines and continuation of actions.",
+                rules: [
+                    { label: "BY", use: "Indicates a deadline; action completed not later than the specified time.", examples: ["submit by Friday", "finish by tomorrow morning"] },
+                    { label: "UNTIL / TILL", use: "Indicates an action continuing up to a specific point in time.", examples: ["wait here until you come back", "stay until 10 p.m."] }
+                ],
+                pitfalls: "BY = deadline (one-time completion). UNTIL = continuous state up to a time."
+            },
+            4: {
+                title: "4. BEFORE – AFTER",
+                def: "Sequential order of time events.",
+                rules: [
+                    { label: "BEFORE", use: "Earlier than a point in time or prior to an event.", examples: ["wash your hands before eating", "arrive before 6 p.m."] },
+                    { label: "AFTER", use: "Subsequent to an event or time point.", examples: ["go for a walk after dinner", "after the class finished"] }
+                ],
+                pitfalls: "Both can be prepositions (+ noun) or conjunctions (+ clause)."
+            },
+            5: {
+                title: "5. FROM – TO – BETWEEN – AND",
+                def: "Specifying time ranges and intervals.",
+                rules: [
+                    { label: "FROM ... TO", use: "Indicates the starting and ending limits of a period.", examples: ["runs from January to March", "open from 9 a.m. to 5 p.m."] },
+                    { label: "BETWEEN ... AND", use: "Specifies the interval connecting two points in time.", examples: ["between 2 p.m. and 4 p.m."] }
+                ],
+                pitfalls: "Always pair FROM with TO, and BETWEEN with AND."
+            },
+            6: {
+                title: "6. WITHIN – THROUGHOUT – OVER",
+                def: "Time limits, continuous spans, and duration across.",
+                rules: [
+                    { label: "WITHIN", use: "Inside a time limit (before a period expires).", examples: ["complete within two weeks"] },
+                    { label: "THROUGHOUT", use: "From the beginning to the end of a continuous period.", examples: ["throughout the year", "throughout history"] },
+                    { label: "OVER", use: "During or across a period of time.", examples: ["over the weekend", "over the past few years"] }
+                ],
+                pitfalls: "WITHIN implies a time limit boundary."
+            },
+            7: {
+                title: "7. AGO – IN – LATER",
+                def: "Past and future time reference points.",
+                rules: [
+                    { label: "AGO", use: "Counts backward from the present (used with Past Simple).", examples: ["three years ago"] },
+                    { label: "IN", use: "Indicates a future duration from now ('in + time').", examples: ["return in a few minutes"] },
+                    { label: "LATER", use: "After a specific point in time ('two days later').", examples: ["two weeks later"] }
+                ],
+                pitfalls: "AGO is always used with past tense verbs."
+            },
+            8: {
+                title: "8. Zero Prepositions",
+                def: "Cases where no preposition is required before time expressions.",
+                rules: [
+                    { label: "TIME WORDS", use: "Omit prepositions before words like 'next', 'last', 'this', 'every', 'yesterday', 'tomorrow'.", examples: ["next Friday", "last Christmas", "this morning", "every day"] }
+                ],
+                pitfalls: "Do not write 'on next Monday' — simply 'next Monday'."
+            },
+            9: {
+                title: "9. Fixed Expressions & Special Cases",
+                def: "Idiomatic time phrases and regional variations.",
+                rules: [
+                    { label: "EXPRESSIONS", use: "At night, at noon, at the weekend (UK) / on the weekend (US), on time, in time.", examples: ["arrive on time (punctual)", "arrive in time (with time to spare)"] }
+                ],
+                pitfalls: "Memorize fixed expressions as single units."
+            },
+            10: {
+                title: "10. Mixed Prepositions & Common Pitfalls",
+                def: "Summary of frequently tested contrasts in English exams.",
+                rules: [
+                    { label: "PITFALLS", use: "In time vs On time; By vs Until; During vs For.", examples: ["In time = early enough", "On time = exactly on schedule"] }
+                ],
+                pitfalls: "Review contrast notes after every incorrect question."
+            }
+        };
+
+        function selectGrammarTab(topicId) {
+            renderGrammarNotes(topicId);
+        }
+
+        function renderGrammarNotes(topicId) {
+            const note = grammarNotesData[topicId];
+            const container = document.getElementById('grammar-content-container');
+            document.getElementById('grammar-topic-select').value = topicId;
+
+            container.innerHTML = `
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">${note.title}</h3>
+                        <p class="text-slate-600 text-base leading-relaxed">${note.def}</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-slate-500">Core Usage & Rules</h4>
+                        <div class="grid grid-cols-1 gap-4">
+                            ${note.rules.map(r => `
+                                <div class="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-2">
+                                    <span class="bg-pastel-accent text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase">${r.label}</span>
+                                    <p class="text-sm text-slate-700 font-medium">${r.use}</p>
+                                    <div class="flex flex-wrap gap-2 pt-1">
+                                        ${r.examples.map(ex => `<span class="bg-blue-50 text-blue-800 border border-blue-100 text-xs px-2.5 py-1 rounded-lg font-medium">${ex}</span>`).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 p-5 rounded-xl flex items-start space-x-3">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-600 text-lg mt-0.5"></i>
+                        <div>
+                            <h5 class="text-sm font-bold text-amber-900">Common Pitfall to Avoid</h5>
+                            <p class="text-xs text-amber-800 mt-1 leading-relaxed">${note.pitfalls}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        /* --- REVIEW MISTAKES MODE --- */
+        function renderReviewMistakes() {
+            const incorrectQs = questionsData.filter(q => userProgress.completed[q.id] && !userProgress.correct[q.id]);
+            const container = document.getElementById('review-container');
+            const actionContainer = document.getElementById('review-action-container');
+
+            if (incorrectQs.length === 0) {
+                actionContainer.innerHTML = '';
+                container.innerHTML = `
+                    <div class="bg-white rounded-2xl p-12 text-center shadow-sm border border-slate-100 space-y-4">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">No Mistakes to Review!</h3>
+                        <p class="text-slate-600 text-sm max-w-md mx-auto">Great job! You haven't made any mistakes yet or you have already mastered all attempted questions.</p>
+                        <button onclick="switchView('practice')" class="bg-pastel-accent hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition shadow-sm">
+                            Continue Practice <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            actionContainer.innerHTML = `<span class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700">${incorrectQs.length} mistakes found</span>`;
+
+            container.innerHTML = incorrectQs.map((q, idx) => {
+                const userAns = userProgress.answers[q.id] || 'None';
+                const displayCorrect = q.ansDisplay || q.ans;
+                return `
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-100 text-rose-700">Question ${q.id} (Part ${q.part})</span>
+                            <button onclick="jumpToQuestion(${q.id}); switchView('practice');" class="text-xs font-medium text-pastel-accent hover:underline">Practice Again <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                        <h4 class="text-base font-semibold text-slate-900">${q.q}</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-rose-50 border border-rose-100 p-3 rounded-xl text-rose-900">
+                                <span class="font-bold">Your Answer:</span> ${userAns}
+                            </div>
+                            <div class="bg-emerald-50 border border-emerald-100 p-3 rounded-xl text-emerald-900">
+                                <span class="font-bold">Correct Answer:</span> ${displayCorrect}
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl text-xs text-slate-700 space-y-1">
+                            <p><strong class="font-semibold text-slate-900">Explanation:</strong> ${q.exp}</p>
+                            <p class="text-slate-500"><strong class="font-semibold text-slate-700">Contrast:</strong> ${q.contrast}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        /* --- RESULTS & ANALYSIS --- */
+        function renderAnalysisReport() {
+            const total = questionsData.length;
+            let completed = 0;
+            let correct = 0;
+
+            questionsData.forEach(q => {
+                if (userProgress.completed[q.id]) {
+                    completed++;
+                    if (userProgress.correct[q.id]) correct++;
+                }
+            });
+
+            const accuracy = completed > 0 ? Math.round((correct / completed) * 100) : 0;
+
+            document.getElementById('analysis-score').innerText = `${correct} / ${total}`;
+            document.getElementById('analysis-accuracy').innerText = `${accuracy}%`;
+            document.getElementById('analysis-attempted').innerText = `${completed} / ${total}`;
+
+            // Badge evaluation
+            let badgeText = "Needs Improvement";
+            let badgeColor = "text-rose-600";
+            if (accuracy >= 90 && completed >= 50) { badgeText = "Excellent (A2-B2 Master)"; badgeColor = "text-emerald-600"; }
+            else if (accuracy >= 80) { badgeText = "Very Good"; badgeColor = "text-blue-600"; }
+            else if (accuracy >= 70) { badgeText = "Good"; badgeColor = "text-indigo-600"; }
+            else if (accuracy >= 60) { badgeText = "Fair"; badgeColor = "text-amber-600"; }
+            document.getElementById('analysis-badge').innerText = badgeText;
+            document.getElementById('analysis-badge').className = `text-sm font-medium ${badgeColor}`;
+
+            // Sections breakdown
+            const sectionsList = document.getElementById('analysis-sections-list');
+            const parts = [
+                { id: 1, name: "Part 1: Multiple Choice (At, In, On)", range: "1–20" },
+                { id: 2, name: "Part 2: Gap Filling (Prepositions)", range: "21–40" },
+                { id: 3, name: "Part 3: Choose Correct Preposition", range: "41–60" },
+                { id: 4, name: "Part 4: Error Correction", range: "61–75" },
+                { id: 5, name: "Part 5: Mixed Grammar Challenge", range: "76–100" }
+            ];
+
+            sectionsList.innerHTML = parts.map(p => {
+                const pQs = questionsData.filter(q => q.part === p.id);
+                const pCompleted = pQs.filter(q => userProgress.completed[q.id]).length;
+                const pCorrect = pQs.filter(q => userProgress.correct[q.id]).length;
+                const pAccuracy = pCompleted > 0 ? Math.round((pCorrect / pCompleted) * 100) : 0;
+
+                return `
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center text-sm font-bold text-slate-800">
+                            <span>${p.name}</span>
+                            <span class="text-pastel-accent">${pCorrect}/${pQs.length} correct (${pAccuracy}%)</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                            <div class="bg-pastel-accent h-2 rounded-full" style="width: ${pAccuracy}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Recommendation
+            const recommendationEl = document.getElementById('analysis-recommendation');
+            if (completed < 20) {
+                recommendationEl.innerText = "You have completed fewer than 20 questions. Complete more exercises across all parts to receive a detailed breakdown of your grammatical strengths and weaknesses.";
+            } else if (accuracy >= 85) {
+                recommendationEl.innerText = "Fantastic performance! You have a solid grasp of English time prepositions. Review any remaining incorrect questions to achieve 100% mastery.";
+            } else {
+                recommendationEl.innerText = "Focus on Part 4 (Error Correction) and Part 2 (Gap Filling) where subtle preposition rules apply. Re-read the Grammar Notes for AT-IN-ON and FOR-SINCE-DURING.";
+            }
+        }
+
+        function exportReport() {
+            const report = {
+                title: "Prepositions of Time - 100 Exercises Report",
+                date: new Date().toLocaleDateString(),
+                totalQuestions: 100,
+                completed: Object.keys(userProgress.completed).length,
+                correct: Object.values(userProgress.correct).filter(Boolean).length,
+                userProgress: userProgress
+            };
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(report, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "Prepositions_Time_Report.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            showNotification("Report exported successfully!", "success");
+        }
+
+        /* --- NOTIFICATIONS / MODALS --- */
+        function showNotification(message, type = "info") {
+            const modal = document.getElementById('custom-modal');
+            const titleEl = document.getElementById('modal-title');
+            const msgEl = document.getElementById('modal-message');
+            const iconEl = document.getElementById('modal-icon');
+            const confirmBtn = document.getElementById('modal-confirm-btn');
+
+            titleEl.innerText = type === "success" ? "Success" : type === "warning" ? "Notice" : "Information";
+            msgEl.innerText = message;
+            confirmBtn.className = "px-4 py-2 rounded-xl bg-pastel-accent hover:bg-blue-600 text-white text-sm font-semibold transition";
+            confirmBtn.innerText = "OK";
+            confirmBtn.onclick = closeModal;
+
+            modal.classList.remove('hidden');
+        }
+
+        function resetProgressConfirm() {
+            const modal = document.getElementById('custom-modal');
+            const titleEl = document.getElementById('modal-title');
+            const msgEl = document.getElementById('modal-message');
+            const confirmBtn = document.getElementById('modal-confirm-btn');
+
+            titleEl.innerText = "Reset All Progress";
+            msgEl.innerText = "Are you sure you want to reset all your progress, answers, and bookmarks? This action cannot be undone.";
+            confirmBtn.className = "px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold transition";
+            confirmBtn.innerText = "Yes, Reset";
+            confirmBtn.onclick = function() {
+                localStorage.removeItem('time_prep_progress');
+                userProgress = { completed: {}, correct: {}, answers: {}, bookmarks: {} };
+                closeModal();
+                updateDashboardStats();
+                showNotification("Progress has been successfully reset.", "success");
+            };
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+
+        /* --- INITIALIZATION ON WINDOW LOAD --- */
+        window.onload = function() {
+            updateDashboardStats();
+        };
+    </script>
 </body>
 </html>
